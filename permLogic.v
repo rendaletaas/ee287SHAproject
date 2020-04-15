@@ -31,7 +31,7 @@ module permLogic(clk, reset, dix, din, pushin, dout, tagout, pushout)
                 if (stateA)
                     nextstate = `firstpush;
                 else
-                    nextstate = empty;
+                    nextstate = `empty;
             end
             `firstpush : begin
                 nextstate = `full;
@@ -47,7 +47,7 @@ module permLogic(clk, reset, dix, din, pushin, dout, tagout, pushout)
                 end
             end
             `restart : begin
-                nextstate = empty;
+                nextstate = `empty;
             end
         endcase
     end
