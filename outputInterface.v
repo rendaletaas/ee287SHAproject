@@ -27,7 +27,7 @@ module outputInterface(clk, reset, din, pushin, doutix, dout, pushout, tagin)
     always @ (posedge clk) begin
         if (pushin)
             outreg <= din;
-        pushout <= pushin || (doutix == 3'b111);
+        pushout <= pushin || (doutix != 3'b111);
         doutix <= nextix;
     end
     
