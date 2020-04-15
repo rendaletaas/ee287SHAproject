@@ -9,6 +9,10 @@ module inputInterface(clk, reset, dix, din, pushin, dout)
     wire [199:0]  din;
     reg  [1599:0] dout;
     
+    always @ (posedge reset) begin
+        dout <= 1600'b0;
+    end
+    
     always @ (posedge clk) begin
         case (dix)
             3'b000 : begin
