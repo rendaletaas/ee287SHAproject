@@ -14,5 +14,5 @@ module perm(clk, reset, dix, din, pushin, doutix, dout, pushout)
     
     inputInterface  block0 (.din(din), .dix(dix), .pushin(pushin), .clk(clk), .reset(reset), .dout(data0));
     permLogic       block1 (.din(data0), .dix(dix), .pushin(pushin), .clk(clk), .reset(reset), .dout(data1), .tagout(tag), .pushout(push0));
-    outputInterface block2 (.din(data1), .pushin(push0), .clk(clk), .reset(reset), .dout(dout), .tagin(tag), .pushout(pushout);
+    outputInterface block2 (.din(data1), .pushin(push0), .clk(clk), .reset(reset), .dout(dout), .tagin(tag), .pushout(pushout), .doutix(doutix);
 endmodule
