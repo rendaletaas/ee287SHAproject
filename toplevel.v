@@ -8,7 +8,8 @@ module perm(clk, reset, dix, din, pushin, doutix, dout, pushout)
     
     wire          clk, reset, pushin, pushout, push0;
     wire [199:0]  din, dout;
-    wire [1599:0] data0, data1;
+    wire data0 [4:0][4:0][63:0];
+    wire data1 [4:0][4:0][63:0];
     wire [2:0]    dix, dout;
     wire [7:0]    tag;
     
