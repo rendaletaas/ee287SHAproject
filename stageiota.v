@@ -9,27 +9,18 @@ module stageiota (din, inR, dout, outR);
     wire dout [4:0][4:0][63:0];
     wire [7:0] outR;
     
-    wire [8:0] tR0 [6:0];
-    wire [7:0] tR1 [6:0];
+    wire tR0 [6:0][8:0];
+    wire tR1 [6:0][8:0];
     wire rc [63:0];
     wire rcmod;
-    
-    genvar a0;
-    generate
-        for (a0=0; a0<7; a0=a0+1) begin
-            assign tR0[a0] = {1'b0, inR);
-        end
-    endgenerate
-    
-    genvar b0;
-    generate
-        for (b0=0; b0<7; b0=b0+1) begin
-            assign tR1[b0] = {tR0[8]^tR0[0], tR0[7], tR0[6], tR0[5], tR0[4]^tR0[0], tR0[3]^tR0[0], tR0[2]^tR0[0], tR0[1]};
-        end
-    endgenerate
 
-    assign outR = tR1[6];
-    assign rcmod = outR[7];
+    genvar a0, b0;
+    generate
+        for(a0=0; a0<6; a0=a0+1) begin
+            for (b0=0; b0<8; b0=b0+1) begin
+            end
+        end
+    endgenerate
     
     genvar x0, y0, z0;
     generate
