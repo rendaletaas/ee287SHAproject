@@ -1,13 +1,13 @@
 module outputInterface(clk, reset, din, pushin, doutix, dout, pushout, tagin)
     input          clk, reset, pushin;
-    input  [1599:0] din;
+    input  din [4:0][4:0][63:0];
     input  [7:0]   tagin;
     output [2:0]   doutix;
     output [199:0] dout;
     output         pushout;
     
     wire          clk, reset, pushin;
-    wire [1599:0] din;
+    wire din [4:0][4:0][63:0];
     wire [7:0]    tagin;
     reg  [199:0]  dout;
     reg  [1599:0] outreg;
@@ -25,8 +25,13 @@ module outputInterface(clk, reset, din, pushin, doutix, dout, pushout, tagin)
     
     /* ======== REGISTER UPDATE ======== */
     always @ (posedge clk) begin
-        if (pushin)
-            outreg <= din;
+        if (pushin) begin
+            outreg[319:0]     <= {din[4][0][63:0], din[3][0][63:0], din[2][0][63:0], din[1][0][63:0], din[0][0][63:0]};
+            outreg[639:320]   <= {din[4][1][63:0], din[3][1][63:0], din[2][1][63:0], din[1][1][63:0], din[0][1][63:0]};
+            outreg[959:640]   <= {din[4][2][63:0], din[3][2][63:0], din[2][2][63:0], din[1][2][63:0], din[0][2][63:0]};
+            outreg[1279:960]  <= {din[4][3][63:0], din[3][3][63:0], din[2][3][63:0], din[1][3][63:0], din[0][3][63:0]};
+            outreg[1599:1280] <= {din[4][4][63:0], din[3][4][63:0], din[2][4][63:0], din[1][4][63:0], din[0][4][63:0]};
+        end
         pushout <= pushin || (doutix != 3'b111);
         doutix <= nextix;
     end
