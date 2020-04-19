@@ -24,8 +24,12 @@ module inputInterface(clk, reset, dix, din, pushin, dout)
     always @ (posedge clk) begin
         case (dix)
             3'b000 : begin
-                if (pushin)
-                    dout[199:0] <= din;
+                if (pushin) begin
+                    dout[0][0][63:0] <= din[63:0];
+                    dout[1][0][63:0] <= din[127:64];
+                    dout[2][0][63:0] <= din[191:128];
+                    dout[3][0][7:0] <= din[199:192];
+                end
             end
             3'b001 : begin
                 if (pushin)
