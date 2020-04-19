@@ -6,19 +6,22 @@
 module permLogic(clk, reset, dix, din, pushin, dout, tagout, pushout)
     input           clk, reset, pushin;
     input  [2:0]    dix;
-    input  [1599:0] din;
-    output [1599:0] dout;
+    input  din [4:0][4:0][63:0];
+    output dout [4:0][4:0][63:0];
     output [7:0]    tagout;
     output          pushout;
     
     wire          clk, reset, pushin;
     wire [2:0]    dix;
-    wire [1599:0] din, dout;
-    wire [1599:0] data0, data1, data2;  //datapath connections between permuation layers
+    wire din [4:0][4:0][63:0];
+    wire dout [4:0][4:0][63:0];
+    wire data0 [4:0][4:0][63:0];  //datapath connections between permutation layers
+    wire data1 [4:0][4:0][63:0];
+    wire data2 [4:0][4:0][63:0];
     wire          pushout;
     wire          stateA;  //controller connection A on block diagram
     reg  [7:0]    tagout;
-    reg  [1599:0] recirculate;
+    reg  recirculate [4:0][4:0][63:0];
     reg  [1:0]    state;
     reg  [1:0]    nextstate;
     reg  [5:0]    ringcounter;
