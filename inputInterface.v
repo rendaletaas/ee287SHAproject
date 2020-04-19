@@ -2,15 +2,23 @@ module inputInterface(clk, reset, dix, din, pushin, dout)
     input           clk, reset, pushin;
     input  [2:0]    dix;
     input  [199:0]  din;
-    output [1599:0] dout;
+    output dout [4:0][4:0][63:0];
     
     wire          clk, reset, pushin;
     wire [2:0]    dix;
     wire [199:0]  din;
-    reg  [1599:0] dout;
+    reg  dout [4:0][4:0][63:0];
+    
+    integer ireset [2:0];
     
     always @ (posedge reset) begin
-        dout <= 1600'b0;
+        for (ireset[2]=0; ireset[2]<5; ireset[2]=ireset[2]+1) begin
+            for (ireset[1]=0; ireset[1]<5; ireset[1]=ireset[1]+1) begin
+                for (ireset[0]=0; ireset[0]<63; ireset[0]=ireset[0]+1) begin
+                    dout[ireset[2]][ireset[1]][ireset[0]] <= 0;
+                end
+            end
+        end
     end
     
     always @ (posedge clk) begin
