@@ -32,7 +32,7 @@ module perm(clk, reset, dix, din, pushin, doutix, dout, pushout);
     
     inputInterface  block0 (.din(din), .dix(dix), .pushin(pushin), .clk(clk), .reset(reset), .dout(data0));
     permLogic       block1 (.din(data0), .dix(dix), .pushin(pushin), .clk(clk), .reset(reset), .dout(data1), .tagout(tag), .pushout(push0));
-    outputInterface block2 (.din(data1), .pushin(push0), .clk(clk), .reset(reset), .dout(dout), .tagin(tag), .pushout(pushout), .doutix(doutix);
+    outputInterface block2 (.din(data1), .pushin(push0), .clk(clk), .reset(reset), .dout(dout), .tagin(tag), .pushout(pushout), .doutix(doutix));
 endmodule
 
 /*============ LEVEL 1: INPUTINTERFACE ============*/
@@ -280,9 +280,9 @@ module theta(theta_in,theta_out);
           modulo_operation_5 = value;
         end 
 
-    endfunction
+    endfunction : modulo_operation_5
 
-endmodule
+endmodule : theta
 
 /*============ LEVEL 3: RHO ============*/
 module rho(rho_in,rho_out);
@@ -364,7 +364,255 @@ module rho(rho_in,rho_out);
           result_value  = value - shifted_value;
         end
           modulo_operation_64 = result_value;
-    endfunction
+    endfunction : modulo_operation_64
 
-endmodule
+endmodule : rho
                             
+/*============ LEVEL 3: PI ============*/
+module pi(pi_in,pi_out);
+
+    input reg [4:0][4:0][63:0] pi_in;
+    output reg [4:0][4:0][63:0] pi_out;
+
+    integer x,y,z;
+
+    //Steps:
+    //1. For all triples (x, y, z) such that 0 ≤ x < 5, 0 ≤ y < 5, and 0 ≤ z < w, let
+    //A′[x, y, z]= A[(x + 3y) mod 5, x, z].
+    //2. Return A′.
+
+    always @(*)
+    begin
+      for(x=0; x<5 ; x=x+1)
+      begin
+        for(y=0 ; y<5 ; y=y+1)
+        begin
+          for(z=0 ; z<64 ; z=z+1)
+          begin
+            pi_out[x][y][z] = pi_in[modulo_operation_5_1((x+3*y),5)][x][z];
+          end 
+        end
+      end 
+    end 
+
+    function integer modulo_operation_5_1(input integer value,input integer modulo_value);
+
+        if (value == modulo_value)
+        begin
+          modulo_operation_5_1 = 0;
+        end
+        else if(value >=0 && value <5) begin
+          modulo_operation_5_1 = value;
+        end 
+        else if(value >= 5 && value <10)begin
+          modulo_operation_5_1 = value - 5;
+        end 
+        else if(value >= 10 && value <15)begin
+          modulo_operation_5_1 = value - 10;
+        end 
+        else if(value >= 15 && value <20)begin
+          modulo_operation_5_1 = value - 15;
+        end 
+        else if(value >= 20 && value <25)begin
+          modulo_operation_5_1 = value - 20;
+        end else 
+        begin
+          modulo_operation_5_1 = value -25;
+        end 
+
+
+    endfunction : modulo_operation_5_1 
+
+endmodule : pi
+
+/*============ LEVEL 3: CHI ============*/
+module chi(chi_in,chi_out);
+
+    input reg [4:0][4:0][63:0] chi_in;
+    output reg [4:0][4:0][63:0] chi_out;
+
+    integer x,y,z;
+
+
+    //Steps:
+    //1. For all triples (x, y, z) such that 0 ≤ x < 5, 0 ≤ y < 5, and 0 ≤ z < w, let
+    //A′ [x, y, z] = A[x, y, z] ⊕ ((A[(x+1) mod 5, y, z] ⊕ 1) ⋅ A[(x+2) mod 5, y, z]).
+    //2. Return A′.
+
+    always @(*)
+    begin
+      for(x=0; x<5 ; x=x+1)
+      begin
+        for(y=0 ; y<5 ; y=y+1)
+        begin
+          for(z=0 ; z<64 ; z=z+1)
+          begin
+            chi_out[x][y][z] = chi_in[x][y][z] ^ ((chi_in[modulo_operation_5_1(x+1,5)][y][z]) ^ 1) * chi_in[modulo_operation_5_1((x+2),5)][y][z];
+          end 
+        end
+      end 
+    end 
+
+    function integer modulo_operation_5_1(input integer value,input integer modulo_value);
+
+        if (value == modulo_value)
+        begin
+          modulo_operation_5_1 = 0;
+        end
+        else if(value >=0 && value <5) begin
+          modulo_operation_5_1 = value;
+        end 
+        else if(value >= 5 && value <10)begin
+          modulo_operation_5_1 = value - 5;
+        end 
+        else if(value >= 10 && value <15)begin
+          modulo_operation_5_1 = value - 10;
+        end 
+        else if(value >= 15 && value <20)begin
+          modulo_operation_5_1 = value - 15;
+        end 
+        else if(value >= 20 && value <25)begin
+          modulo_operation_5_1 = value - 20;
+        end else 
+        begin
+          modulo_operation_5_1 = value -25;
+        end 
+
+
+    endfunction : modulo_operation_5_1 
+
+endmodule : chi
+
+/*============ LEVEL 3: IOTA ============*/
+module iota (din, inR, dout, outR);
+    input din [4:0][4:0][63:0];
+    input [4:0] inRound;
+    output dout [4:0][4:0][63:0];
+    output [8:0] outR;
+    
+    wire din [4:0][4:0][63:0];
+    wire [4:0] inRound;
+    wire dout [4:0][4:0][63:0];
+    wire [8:0] outR;
+    
+    reg [63:0] rc;
+
+    always @ (inRound) begin
+        case (inRound)
+            5'd0  : rc <= 64'h0000000000000001;
+            5'd1  : rc <= 64'h0000000000008082;
+            5'd2  : rc <= 64'h800000000000808A
+            5'd3  : rc <= 64'h8000000080008000
+            5'd4  : rc <= 64'h000000000000808B
+            5'd5  : rc <= 64'h0000000080000001
+            5'd6  : rc <= 64'h8000000080008081
+            5'd7  : rc <= 64'h8000000000008009
+            5'd8  : rc <= 64'h000000000000008A
+            5'd9  : rc <= 64'h0000000000000088
+            5'd10 : rc <= 64'h0000000080008009
+            5'd11 : rc <= 64'h000000008000000A
+            5'd12 : rc <= 64'h000000008000808B
+            5'd13 : rc <= 64'h800000000000008B
+            5'd14 : rc <= 64'h8000000000008089
+            5'd15 : rc <= 64'h8000000000008003
+            5'd16 : rc <= 64'h8000000000008002
+            5'd17 : rc <= 64'h8000000000000080
+            5'd18 : rc <= 64'h000000000000800A
+            5'd19 : rc <= 64'h800000008000000A
+            5'd20 : rc <= 64'h8000000080008081
+            5'd21 : rc <= 64'h8000000000008080
+            5'd22 : rc <= 64'h0000000080000001
+            5'd23 : rc <= 64'h8000000080008008
+            default : rc <= 64'h0;
+        endcase
+    end
+
+    //modify lane x=0,y=0 by rc
+    genvar x0, y0, z0;
+    generate
+        for (x0=0; x0<5; x0=x0+1) begin
+            for (y0=0; y0<5; y0=y0+1) begin
+                if ((x0==0) && (y0==0)) begin
+                    for (z0=0; z0<64; z0=z0+1) begin
+                        assign dout[x0][y0][z0] = din[x0][y0][z0] ^ rc[z0];
+                    end
+                end
+                else begin
+                    for (z0=0; z0<64; z0=z0+1) begin
+                        assign dout[x0][y0][z0] = din[x0][y0][z0];
+                    end
+                end
+            end
+        end
+    endgenerate
+endmodule
+
+/*============ LEVEL 1: OUTPUTINTERFACE ============*/
+module outputInterface(clk, reset, din, pushin, doutix, dout, pushout, tagin)
+    input          clk, reset, pushin;
+    input  din [4:0][4:0][63:0];
+    input  [7:0]   tagin;
+    output [2:0]   doutix;
+    output [199:0] dout;
+    output         pushout;
+    
+    wire          clk, reset, pushin;
+    wire din [4:0][4:0][63:0];
+    wire [7:0]    tagin;
+    reg  [199:0]  dout;
+    reg  [1599:0] outreg;
+    reg  [2:0]    doutix, nextix;
+    reg           pushout;
+    reg  [7:0]    datatag;
+    
+    /* ======== REGISTER RESET ======== */
+    always @ (posedge reset) begin
+        outreg <= 1600'b0;
+        doutix <= 3'b0;
+        pushout <= 0;
+        datatag <= 8'b0;
+    end
+    
+    /* ======== REGISTER UPDATE ======== */
+    always @ (posedge clk) begin
+        if (pushin) begin
+            outreg[319:0]     <= {din[4][0][63:0], din[3][0][63:0], din[2][0][63:0], din[1][0][63:0], din[0][0][63:0]};
+            outreg[639:320]   <= {din[4][1][63:0], din[3][1][63:0], din[2][1][63:0], din[1][1][63:0], din[0][1][63:0]};
+            outreg[959:640]   <= {din[4][2][63:0], din[3][2][63:0], din[2][2][63:0], din[1][2][63:0], din[0][2][63:0]};
+            outreg[1279:960]  <= {din[4][3][63:0], din[3][3][63:0], din[2][3][63:0], din[1][3][63:0], din[0][3][63:0]};
+            outreg[1599:1280] <= {din[4][4][63:0], din[3][4][63:0], din[2][4][63:0], din[1][4][63:0], din[0][4][63:0]};
+        end
+        pushout <= pushin || (doutix != 3'b111);
+        doutix <= nextix;
+    end
+    
+    /* ======== COUNTER UPDATE ======== */
+    always @ (doutix or pushout) begin
+        if (pushout) begin
+            case (doutix)
+                3'b000: nextix = 3'b001;
+                3'b001: nextix = 3'b010;
+                3'b010: nextix = 3'b011;
+                3'b011: nextix = 3'b100;
+                3'b100: nextix = 3'b101;
+                3'b101: nextix = 3'b110;
+                3'b110: nextix = 3'b111;
+                3'b111: nextix = 3'b000;
+            endcase
+        end
+    end
+    
+    /* ======== DATAPATH ======== */
+    always @ (doutix or outreg) begin
+        case (doutix)
+            3'b000: dout = outreg[199:0];
+            3'b001: dout = outreg[399:200];
+            3'b010: dout = outreg[599:400];
+            3'b011: dout = outreg[799:600];
+            3'b100: dout = outreg[999:800];
+            3'b101: dout = outreg[1199:1000];
+            3'b110: dout = outreg[1399:1200];
+            3'b111: dout = outreg[1599:1400];
+        endcase
+    end
+endmodule
