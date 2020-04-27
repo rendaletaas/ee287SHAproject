@@ -22,7 +22,7 @@
 
 /*============ LEVEL 0 PERM ============*/
 
-module perm (clk, reset, dix, din, pushin, doutix, dout, pushout, debugtap);
+module perm (clk, reset, dix, din, pushin, doutix, dout, pushout);
 
 input           clk, reset;
 input  [2:0]    dix;
@@ -31,9 +31,6 @@ input           pushin;
 output [2:0]    doutix;
 output [199:0]  dout;
 output          pushout;
-
-//DEBUG
-output [4:0][4:0][63:0] debugtap;
 
 wire                    clk, reset, pushin, pushout;
 wire [199:0]            din, dout;
@@ -48,8 +45,6 @@ permLogic logic1 (clk, reset, endofstring, data0, endoflogic, data1, datatag);
 outputInterface ouput1 (clk, reset, datatag, data1, endoflogic, doutix, dout, pushout);
 
 assign endofstring = &dix && pushin;
-
-assign debugtap = data1;
 
 endmodule  //end perm
 
