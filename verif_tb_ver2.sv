@@ -44,9 +44,7 @@ wire [2:0]      tb_doutix;
 wire [199:0]    tb_dout;
 wire            tb_pushout;
 
-wire [4:0][4:0][63:0] tb_debug;
-
-perm perm0 (tb_clk, tb_reset, tb_dix, tb_din, tb_pushin, tb_doutix, tb_dout, tb_pushout, tb_debug);
+perm perm0 (tb_clk, tb_reset, tb_dix, tb_din, tb_pushin, tb_doutix, tb_dout, tb_pushout);
 
 initial begin
     $dumpfile("perm_wave.vcd");
