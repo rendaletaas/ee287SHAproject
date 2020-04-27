@@ -1,13 +1,15 @@
+//Use ctrl+f to find a module in the code
+//For example: ctrl+f "LEVEL 3 RHO"
 //LEVEL 0 PERM
-// LEVEL 1 INPUT_INTERFACE
-// LEVEL 1 PERM_LOGIC
-//  LEVEL 2 PERM_LAYER
-//   LEVEL 3 THETA
-//   LEVEL 3 RHO
-//   LEVEL 3 PI
-//   LEVEL 3 CHI
-//   LEVEL 3 IOTA
-// LEVEL 1 OUTPUT_INTERFACE
+//    LEVEL 1 INPUT_INTERFACE
+//    LEVEL 1 PERM_LOGIC
+//        LEVEL 2 PERM_LAYER
+//            LEVEL 3 THETA
+//            LEVEL 3 RHO
+//            LEVEL 3 PI
+//            LEVEL 3 CHI
+//            LEVEL 3 IOTA
+//    LEVEL 1 OUTPUT_INTERFACE
 
 `define empty 2'b00
 `define firstpush 2'b01
@@ -46,7 +48,10 @@ outputInterface ouput1 (clk, reset, datatag, data1, endoflogic, doutix, dout, pu
 
 assign endofstring = &dix && pushin;
 
-endmodule  //end perm
+endmodule
+/*============ END PERM ============*/
+
+
 
 /*============ LEVEL 1 INPUT_INTERFACE ============*/
 
@@ -320,6 +325,7 @@ endmodule
 
 
 /*============ LEVEL 2 PERM_LAYER ============*/
+
 module permLayer (din, roundin, dout);
 
 input [4:0][4:0][63:0]  din;
@@ -496,6 +502,7 @@ endmodule
 
 
 /*============ LEVEL 3 PI ============*/
+
 module pi(pi_in,pi_out);
 
 input reg [4:0][4:0][63:0] pi_in;
@@ -556,6 +563,7 @@ endmodule
 
 
 /*============ LEVEL 3 CHI ============*/
+
 module chi(chi_in,chi_out);
 
 input reg [4:0][4:0][63:0] chi_in;
@@ -617,6 +625,7 @@ endmodule
 
 
 /*============ LEVEL 3 IOTA ============*/
+
 module iota (din, roundin, dout);
 input [4:0][4:0][63:0]  din;
 input [4:0]             roundin;
@@ -683,6 +692,7 @@ endmodule
 
 
 /*============ LEVEL 1 OUTPUT_INTERFACE ============*/
+
 module outputInterface (clk, reset, intag, din, pushin, doutix, dout, pushout);
 
 input                   clk, reset;
