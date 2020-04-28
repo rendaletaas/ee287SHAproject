@@ -70,7 +70,11 @@ reg [4:0][4:0][63:0]    dout;
 
 /*======== RESET ========*/
 integer ireset [2:0];
-always @ (negedge reset) begin
+/*==== END RESET ====*/
+
+/*======== DATA LOADING ========*/
+always @ (posedge clk or posedge reset) begin
+  if(reset == 1) begin 
     for (ireset[2]=0; ireset[2]<5; ireset[2]=ireset[2]+1) begin
         for (ireset[1]=0; ireset[1]<5; ireset[1]=ireset[1]+1) begin
             for (ireset[0]=0; ireset[0]<64; ireset[0]=ireset[0]+1) begin
@@ -78,77 +82,74 @@ always @ (negedge reset) begin
             end
         end
     end
-end
-/*==== END RESET ====*/
-
-/*======== DATA LOADING ========*/
-always @ (posedge clk) begin
+  end else begin
     case (dix)
         3'b000 : begin
             if (pushin) begin
-                dout[0][0][63:0] <= din[63:0];
-                dout[1][0][63:0] <= din[127:64];
-                dout[2][0][63:0] <= din[191:128];
-                dout[3][0][7:0]  <= din[199:192];
+                dout[0][0][63:0] <= #1 din[63:0];
+                dout[1][0][63:0] <= #1 din[127:64];
+                dout[2][0][63:0] <= #1 din[191:128];
+                dout[3][0][7:0]  <= #1 din[199:192];
             end
         end
         3'b001 : begin
             if (pushin) begin
-                dout[3][0][63:8] <= din[55:0];
-                dout[4][0][63:0] <= din[119:56];
-                dout[0][1][63:0] <= din[183:120];
-                dout[1][1][15:0] <= din[199:184];
+                dout[3][0][63:8] <= #1 din[55:0];
+                dout[4][0][63:0] <= #1 din[119:56];
+                dout[0][1][63:0] <= #1 din[183:120];
+                dout[1][1][15:0] <= #1 din[199:184];
             end
         end
         3'b010 : begin
             if (pushin) begin
-                dout[1][1][63:16] <= din[47:0];
-                dout[2][1][63:0]  <= din[111:48];
-                dout[3][1][63:0]  <= din[175:112];
-                dout[4][1][23:0]  <= din[199:176];
+                dout[1][1][63:16] <= #1 din[47:0];
+                dout[2][1][63:0]  <= #1 din[111:48];
+                dout[3][1][63:0]  <= #1 din[175:112];
+                dout[4][1][23:0]  <= #1 din[199:176];
             end
         end
         3'b011 : begin
             if (pushin) begin
-                dout[4][1][63:24] <= din[39:0];
-                dout[0][2][63:0]  <= din[103:40];
-                dout[1][2][63:0]  <= din[167:104];
-                dout[2][2][31:0]  <= din[199:168];
+                dout[4][1][63:24] <= #1 din[39:0];
+                dout[0][2][63:0]  <= #1 din[103:40];
+                dout[1][2][63:0]  <= #1 din[167:104];
+                dout[2][2][31:0]  <= #1 din[199:168];
             end
         end
         3'b100 : begin
             if (pushin) begin
-                dout[2][2][63:32] <= din[31:0];
-                dout[3][2][63:0]  <= din[95:32];
-                dout[4][2][63:0]  <= din[159:96];
-                dout[0][3][39:0]  <= din[199:160];
+                dout[2][2][63:32] <= #1 din[31:0];
+                dout[3][2][63:0]  <= #1 din[95:32];
+                dout[4][2][63:0]  <= #1 din[159:96];
+                dout[0][3][39:0]  <= #1 din[199:160];
             end
         end
         3'b101 : begin
             if (pushin) begin
-                dout[0][3][63:40] <= din[23:0];
-                dout[1][3][63:0]  <= din[87:24];
-                dout[2][3][63:0]  <= din[151:88];
-                dout[3][3][47:0]  <= din[199:152];
+                dout[0][3][63:40] <= #1 din[23:0];
+                dout[1][3][63:0]  <= #1 din[87:24];
+                dout[2][3][63:0]  <= #1 din[151:88];
+                dout[3][3][47:0]  <= #1 din[199:152];
             end
         end
         3'b110 : begin
             if (pushin) begin
-                dout[3][3][63:48] <= din[15:0];
-                dout[4][3][63:0]  <= din[79:16];
-                dout[0][4][63:0]  <= din[143:80];
-                dout[1][4][55:0]  <= din[199:144];
+                dout[3][3][63:48] <= #1 din[15:0];
+                dout[4][3][63:0]  <= #1 din[79:16];
+                dout[0][4][63:0]  <= #1 din[143:80];
+                dout[1][4][55:0]  <= #1 din[199:144];
             end
         end
         3'b111 : begin
             if (pushin) begin
-                dout[1][4][63:56] <= din[7:0];
-                dout[2][4][63:0]  <= din[71:8];
-                dout[3][4][63:0]  <= din[135:72];
-                dout[4][4][63:0]  <= din[199:136];
+                dout[1][4][63:56] <= #1 din[7:0];
+                dout[2][4][63:0]  <= #1 din[71:8];
+                dout[3][4][63:0]  <= #1 din[135:72];
+                dout[4][4][63:0]  <= #1 din[199:136];
             end
         end
     endcase
+  end
 end
 /*==== END DATA LOADING ====*/
 
@@ -179,44 +180,42 @@ wire [4:0][4:0][63:0]   data0, data1, data2;
 reg [1:0]               state, nextstate;
 reg [4:0][4:0][63:0]    recirculate;
 reg [6:0]               ringcounter;
-always @ (posedge clk) begin
-    state <= nextstate;
+integer i;
+always @ (posedge clk or posedge reset) begin
+  if(reset == 1) begin
+    state <= `restart ;
+    recirculate <= 1600'b0;
+    datatag <= 32'b0;
+    ringcounter <= 7'b0000_001;
+  end else begin
+    state <= #1 nextstate;
     if ((state == `firstpush) || (state == `full)) begin
-        recirculate <= dout;
+        recirculate <= #1 dout;
     end
     if (state == `firstpush) begin
-        datatag[31:28] <= din[4][4][63:60];
-        datatag[27:24] <= din[1][4][55:52];
-        datatag[23:20] <= din[3][3][47:44];
-        datatag[19:16] <= din[0][3][39:36];
-        datatag[15:12] <= din[2][2][31:28];
-        datatag[11:8] <=  din[4][1][23:20];
-        datatag[7:4] <=   din[1][1][15:12];
-        datatag[3:0] <=   din[3][0][7:4];
+        datatag[31:28] <= #1 din[4][4][63:60];
+        datatag[27:24] <= #1 din[1][4][55:52];
+        datatag[23:20] <= #1 din[3][3][47:44];
+        datatag[19:16] <= #1 din[0][3][39:36];
+        datatag[15:12] <= #1 din[2][2][31:28];
+        datatag[11:8] <=  #1 din[4][1][23:20];
+        datatag[7:4] <=   #1 din[1][1][15:12];
+        datatag[3:0] <=   #1 din[3][0][7:4];
     end
     if (state == `full) begin
-        ringcounter[0] <= ringcounter[6];
-        ringcounter[1] <= ringcounter[0];
-        ringcounter[2] <= ringcounter[1];
-        ringcounter[3] <= ringcounter[2];
-        ringcounter[4] <= ringcounter[3];
-        ringcounter[5] <= ringcounter[4];
-        ringcounter[6] <= ringcounter[5];
+        ringcounter[0] <= #1 ringcounter[6];
+        ringcounter[1] <= #1 ringcounter[0];
+        ringcounter[2] <= #1 ringcounter[1];
+        ringcounter[3] <= #1 ringcounter[2];
+        ringcounter[4] <= #1 ringcounter[3];
+        ringcounter[5] <= #1 ringcounter[4];
+        ringcounter[6] <= #1 ringcounter[5];
     end
+  end
 end
 /*==== END REGISTER UPDATE ====*/
 
 /*======== RESET ========*/
-integer i;
-always @ (negedge reset) begin
-    state <= `restart ;
-    recirculate <= 200'b0;
-    datatag <= 32'b0;
-    for(i=1;i<7;i=i+1) begin
-        ringcounter[i] <= 1'b0;
-    end
-    ringcounter[0] <= 1'b1;
-end
 /*==== END RESET ====*/
 
 /*======== STATE MACHINE ========*/
@@ -362,33 +361,39 @@ integer x,y,z;
 always @(*)
 begin
   // STEP : 1
-  // For all pairs (x, z) such that 0 ≤ x < 5 and 0 ≤ z < w, let
-  // C[x, z] = A[x, 0, z] ⊕ A[x, 1, z] ⊕ A[x, 2, z] ⊕ A[x, 3, z] ⊕ A[x, 4, z].
-
-  // STEP : 2
-  //For all pairs (x, z) such that 0 ≤ x < 5 and 0 ≤ z < w let
-  //D[x, z] = C[(x-1) mod 5, z] ⊕ C[(x+1) mod 5, (z – 1) mod w].
+  // For all pairs (x, z) such that 0 d x < 5 and 0 d z < w, let
+  // C[x, z] = A[x, 0, z]  A[x, 1, z]  A[x, 2, z]  A[x, 3, z]  A[x, 4, z].
   for(x=0; x<5 ; x=x+1)
   begin
     for(z=0 ; z<64 ; z=z+1)
     begin
       C[x][z] = theta_in[x][0][z] ^ theta_in[x][1][z] ^ theta_in[x][2][z] ^ theta_in[x][3][z] ^ theta_in[x][4][z];
+    end 
+  end 
+
+  // STEP : 2
+  //For all pairs (x, z) such that 0 d x < 5 and 0 d z < w let
+  //D[x, z] = C[(x-1) mod 5, z]  C[(x+1) mod 5, (z  1) mod w].
+  for(x=0; x<5 ; x=x+1)
+  begin
+    for(z=0 ; z<64 ; z=z+1)
+    begin
       D[x][z] = C[modulo_operation_5(x-1,5)][z] ^ C[modulo_operation_5(x+1,5)] [modulo_operation_5(z-1,64)];
     end 
   end 
 
   // STEP : 3
-  //For all triples (x, y, z) such that 0 ≤ x < 5, 0 ≤ y < 5, and 0 ≤ z < w, let
-  //A′[x, y, z] = A[x, y, z] ⊕ D[x, z].
+  //For all triples (x, y, z) such that 0 d x < 5, 0 d y < 5, and 0 d z < w, let
+  //A2[x, y, z] = A[x, y, z]  D[x, z].
 
   for(x=0; x<5 ; x=x+1)
   begin
     for(y=0 ; y<5 ; y=y+1)
     begin
-      for(z=0 ; z<64 ; z=z+1)
-      begin
-        theta_out[x][y][z] = theta_in[x][y][z] ^ D[x][z];
-      end 
+      //for(z=0 ; z<64 ; z=z+1)
+      //begin
+        theta_out[x][y]/*[z]*/ = theta_in[x][y]/*[z]*/ ^ D[x]/*[z]*/;
+      //end 
     end
   end 
 end 
@@ -424,7 +429,17 @@ reg [8:0] offset[4:0][4:0] ;
 
 integer x,y,z;
 
-initial begin
+//Steps:
+//1. For all z such that 0 d z < w, let A2 [0, 0, z] = A[0, 0, z]
+//2. Let (x, y) = (1, 0).
+//13
+//3. For t from 0 to 23:
+//a. for all z such that 0 d z < w, let A2[x, y, z] = A[x, y, (z  (t + 1)(t + 2)/2) mod w];
+//b. let (x, y) = (y, (2x + 3y) mod 5).
+//4. Return A2
+
+always @(*)
+begin
   offset[0][0] = 9'd0; 
   offset[0][1] = 9'd36; 
   offset[0][2] = 9'd3;
@@ -450,19 +465,6 @@ initial begin
   offset[4][2] = 9'd231; 
   offset[4][3] = 9'd136; 
   offset[4][4] = 9'd78; 
-end
-
-//Steps:
-//1. For all z such that 0 ≤ z < w, let A′ [0, 0, z] = A[0, 0, z]
-//2. Let (x, y) = (1, 0).
-//13
-//3. For t from 0 to 23:
-//a. for all z such that 0 ≤ z < w, let A′[x, y, z] = A[x, y, (z – (t + 1)(t + 2)/2) mod w];
-//b. let (x, y) = (y, (2x + 3y) mod 5).
-//4. Return A′
-
-always @(*)
-begin
   for(x=0; x<5 ; x=x+1)
   begin
     for(y=0 ; y<5 ; y=y+1)
@@ -479,9 +481,6 @@ function integer modulo_operation_64(input integer value,input integer modulo_va
 
 integer shifted_value;
 integer result_value;
-
-begin
-end 
 
 if(value == modulo_value) 
 begin
@@ -511,9 +510,9 @@ output reg [4:0][4:0][63:0] pi_out;
 integer x,y,z;
 
 //Steps:
-//1. For all triples (x, y, z) such that 0 ≤ x < 5, 0 ≤ y < 5, and 0 ≤ z < w, let
-//A′[x, y, z]= A[(x + 3y) mod 5, x, z].
-//2. Return A′.
+//1. For all triples (x, y, z) such that 0 d x < 5, 0 d y < 5, and 0 d z < w, let
+//A2[x, y, z]= A[(x + 3y) mod 5, x, z].
+//2. Return A2.
 
 always @(*)
 begin
@@ -573,9 +572,9 @@ integer x,y,z;
 
 
 //Steps:
-//1. For all triples (x, y, z) such that 0 ≤ x < 5, 0 ≤ y < 5, and 0 ≤ z < w, let
-//A′ [x, y, z] = A[x, y, z] ⊕ ((A[(x+1) mod 5, y, z] ⊕ 1) ⋅ A[(x+2) mod 5, y, z]).
-//2. Return A′.
+//1. For all triples (x, y, z) such that 0 d x < 5, 0 d y < 5, and 0 d z < w, let
+//A2 [x, y, z] = A[x, y, z]  ((A[(x+1) mod 5, y, z]  1) Å A[(x+2) mod 5, y, z]).
+//2. Return A2.
 
 always @(*)
 begin
@@ -639,31 +638,31 @@ reg [63:0] rc;
 
 always @ (roundin) begin
     case (roundin)
-        5'd0  : rc <= 64'h0000000000000001;
-        5'd1  : rc <= 64'h0000000000008082;
-        5'd2  : rc <= 64'h800000000000808A;
-        5'd3  : rc <= 64'h8000000080008000;
-        5'd4  : rc <= 64'h000000000000808B;
-        5'd5  : rc <= 64'h0000000080000001;
-        5'd6  : rc <= 64'h8000000080008081;
-        5'd7  : rc <= 64'h8000000000008009;
-        5'd8  : rc <= 64'h000000000000008A;
-        5'd9  : rc <= 64'h0000000000000088;
-        5'd10 : rc <= 64'h0000000080008009;
-        5'd11 : rc <= 64'h000000008000000A;
-        5'd12 : rc <= 64'h000000008000808B;
-        5'd13 : rc <= 64'h800000000000008B;
-        5'd14 : rc <= 64'h8000000000008089;
-        5'd15 : rc <= 64'h8000000000008003;
-        5'd16 : rc <= 64'h8000000000008002;
-        5'd17 : rc <= 64'h8000000000000080;
-        5'd18 : rc <= 64'h000000000000800A;
-        5'd19 : rc <= 64'h800000008000000A;
-        5'd20 : rc <= 64'h8000000080008081;
-        5'd21 : rc <= 64'h8000000000008080;
-        5'd22 : rc <= 64'h0000000080000001;
-        5'd23 : rc <= 64'h8000000080008008;
-        default : rc <= 64'h0;
+        5'd0  : rc = 64'h0000000000000001;
+        5'd1  : rc = 64'h0000000000008082;
+        5'd2  : rc = 64'h800000000000808A;
+        5'd3  : rc = 64'h8000000080008000;
+        5'd4  : rc = 64'h000000000000808B;
+        5'd5  : rc = 64'h0000000080000001;
+        5'd6  : rc = 64'h8000000080008081;
+        5'd7  : rc = 64'h8000000000008009;
+        5'd8  : rc = 64'h000000000000008A;
+        5'd9  : rc = 64'h0000000000000088;
+        5'd10 : rc = 64'h0000000080008009;
+        5'd11 : rc = 64'h000000008000000A;
+        5'd12 : rc = 64'h000000008000808B;
+        5'd13 : rc = 64'h800000000000008B;
+        5'd14 : rc = 64'h8000000000008089;
+        5'd15 : rc = 64'h8000000000008003;
+        5'd16 : rc = 64'h8000000000008002;
+        5'd17 : rc = 64'h8000000000000080;
+        5'd18 : rc = 64'h000000000000800A;
+        5'd19 : rc = 64'h800000008000000A;
+        5'd20 : rc = 64'h8000000080008081;
+        5'd21 : rc = 64'h8000000000008080;
+        5'd22 : rc = 64'h0000000080000001;
+        5'd23 : rc = 64'h8000000080008008;
+        default : rc = 64'h0;
     endcase
 end
 
@@ -718,30 +717,31 @@ reg [31:0]      datatag;
 
 
 /* ======== REGISTER RESET ======== */
-always @ (negedge reset) begin
+/*==== END REGISTER RESET ====*/
+
+/* ======== REGISTER UPDATE ======== */
+always @ (posedge clk or posedge reset) begin
+   if(reset==1)begin
     doutix <= 3'd0;
     state <= `restart ;
     outreg <= 1600'b0;
     datatag <= 32'b0;
-end
-/*==== END REGISTER RESET ====*/
-
-/* ======== REGISTER UPDATE ======== */
-always @ (posedge clk) begin
-    state <= nextstate;
+   end else begin
+    state <= #1 nextstate;
 
     if (pushin) begin
-        outreg[319:0]     <= {din[4][0][63:0], din[3][0][63:0], din[2][0][63:0], din[1][0][63:0], din[0][0][63:0]};
-        outreg[639:320]   <= {din[4][1][63:0], din[3][1][63:0], din[2][1][63:0], din[1][1][63:0], din[0][1][63:0]};
-        outreg[959:640]   <= {din[4][2][63:0], din[3][2][63:0], din[2][2][63:0], din[1][2][63:0], din[0][2][63:0]};
-        outreg[1279:960]  <= {din[4][3][63:0], din[3][3][63:0], din[2][3][63:0], din[1][3][63:0], din[0][3][63:0]};
-        outreg[1599:1280] <= {din[4][4][63:0], din[3][4][63:0], din[2][4][63:0], din[1][4][63:0], din[0][4][63:0]};
-        datatag <= intag;
+        outreg[319:0]     <= #1 {din[4][0][63:0], din[3][0][63:0], din[2][0][63:0], din[1][0][63:0], din[0][0][63:0]};
+        outreg[639:320]   <= #1 {din[4][1][63:0], din[3][1][63:0], din[2][1][63:0], din[1][1][63:0], din[0][1][63:0]};
+        outreg[959:640]   <= #1 {din[4][2][63:0], din[3][2][63:0], din[2][2][63:0], din[1][2][63:0], din[0][2][63:0]};
+        outreg[1279:960]  <= #1 {din[4][3][63:0], din[3][3][63:0], din[2][3][63:0], din[1][3][63:0], din[0][3][63:0]};
+        outreg[1599:1280] <= #1 {din[4][4][63:0], din[3][4][63:0], din[2][4][63:0], din[1][4][63:0], din[0][4][63:0]};
+        datatag <= #1 intag;
     end
 
     if ((state == `yespush) || (state == `pbranch)) begin
-        doutix <= nextix;
+        doutix <= #1 nextix;
     end
+   end 
 end
 
 assign pushout = state[0];
@@ -800,5 +800,14 @@ always @ (doutix or outreg) begin
 end
 /*==== END DATAPATH ====*/
 
+always @(*) begin
+  #1;
+  $display("o %d %h",doutix,dout);
+end 
+
 endmodule
 /*============ END OUTPUT_INTERFACE ============*/
+
+
+
+
