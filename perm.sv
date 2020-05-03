@@ -1,15 +1,34 @@
-//Use ctrl+f to find a module in the code
-//For example: ctrl+f "LEVEL 3 RHO"
-//LEVEL 0 PERM
-//    LEVEL 1 INPUT_INTERFACE
-//    LEVEL 1 PERM_LOGIC
-//        LEVEL 2 PERM_LAYER
-//            LEVEL 3 THETA
-//            LEVEL 3 RHO
-//            LEVEL 3 PI
-//            LEVEL 3 CHI
-//            LEVEL 3 IOTA
-//    LEVEL 1 OUTPUT_INTERFACE
+/*SHA3-256 Permutation engine
+Last edited: 03-May-2020
+Tested in testbench "tbp.sv"
+
+For EE287 Spring 2020 at SJSU
+Prof. Morris Jones
+Group 19
+Contributors:
+Dharm Patel
+Rendale Mark Taas
+Sheethal Thankachan
+
+Permutation engine that meets the SHA-3 standard from the NIST.
+Performs only the keccak-p permutations. Each permulation layer performs one round. Engine performs 24 rounds over 8 clock cycles.
+Data is pushed in and out 200 bits every clock cycle. Data is indexed and has a push signal.
+
+Use ctrl+f to find a module in the code
+For example: ctrl+f "LEVEL 3 RHO"
+
+LEVEL 0 PERM
+    LEVEL 1 INPUT_INTERFACE
+    LEVEL 1 PERM_LOGIC
+        LEVEL 2 PERM_LAYER
+            LEVEL 3 THETA
+            LEVEL 3 RHO
+            LEVEL 3 PI
+            LEVEL 3 CHI
+            LEVEL 3 IOTA
+    LEVEL 1 OUTPUT_INTERFACE
+EOF
+*/
 
 `define empty 2'b00
 `define firstpush 2'b01
@@ -39,12 +58,11 @@ wire [199:0]            din, dout;
 wire [2:0]              dix, doutix;
 
 wire [4:0][4:0][63:0]   data0, data1;
-wire                    endofstring, endoflogic;
-wire [31:0]             datatag;
+wire                    endofstring, endoflogic;  //signals when data is fully loaded and fully processed, respectively
 
 inputInterface input1 (clk, reset, dix, din, pushin, data0);
-permLogic logic1 (clk, reset, endofstring, data0, endoflogic, data1, datatag);
-outputInterface ouput1 (clk, reset, datatag, data1, endoflogic, doutix, dout, pushout);
+permLogic logic1 (clk, reset, endofstring, data0, endoflogic, data1);
+outputInterface ouput1 (clk, reset, data1, endoflogic, doutix, dout, pushout);
 
 assign endofstring = &dix && pushin;
 
@@ -72,83 +90,84 @@ integer ireset [2:0];
 
 /*======== DATA LOADING ========*/
 always @ (posedge clk or posedge reset) begin
-  if(reset == 1) begin 
-    for (ireset[2]=0; ireset[2]<5; ireset[2]=ireset[2]+1) begin
-        for (ireset[1]=0; ireset[1]<5; ireset[1]=ireset[1]+1) begin
-            for (ireset[0]=0; ireset[0]<64; ireset[0]=ireset[0]+1) begin
-                dout[ireset[2]][ireset[1]][ireset[0]] <= 0;
+    if(reset == 1) begin 
+        for (ireset[2]=0; ireset[2]<5; ireset[2]=ireset[2]+1) begin
+            for (ireset[1]=0; ireset[1]<5; ireset[1]=ireset[1]+1) begin
+                for (ireset[0]=0; ireset[0]<64; ireset[0]=ireset[0]+1) begin
+                    dout[ireset[2]][ireset[1]][ireset[0]] <= 0;
+                end
             end
         end
     end
-  end
-  else begin  //~reset
-    case (dix)
-        3'b000 : begin
-            if (pushin) begin
-                dout[0][0][63:0] <= #1 din[63:0];
-                dout[1][0][63:0] <= #1 din[127:64];
-                dout[2][0][63:0] <= #1 din[191:128];
-                dout[3][0][7:0]  <= #1 din[199:192];
+
+    else begin  //~reset
+        case (dix)
+            3'b000 : begin
+                if (pushin) begin
+                    dout[0][0][63:0] <= #1 din[63:0];
+                    dout[1][0][63:0] <= #1 din[127:64];
+                    dout[2][0][63:0] <= #1 din[191:128];
+                    dout[3][0][7:0]  <= #1 din[199:192];
+                end
             end
-        end
-        3'b001 : begin
-            if (pushin) begin
-                dout[3][0][63:8] <= #1 din[55:0];
-                dout[4][0][63:0] <= #1 din[119:56];
-                dout[0][1][63:0] <= #1 din[183:120];
-                dout[1][1][15:0] <= #1 din[199:184];
+            3'b001 : begin
+                if (pushin) begin
+                    dout[3][0][63:8] <= #1 din[55:0];
+                    dout[4][0][63:0] <= #1 din[119:56];
+                    dout[0][1][63:0] <= #1 din[183:120];
+                    dout[1][1][15:0] <= #1 din[199:184];
+                end
             end
-        end
-        3'b010 : begin
-            if (pushin) begin
-                dout[1][1][63:16] <= #1 din[47:0];
-                dout[2][1][63:0]  <= #1 din[111:48];
-                dout[3][1][63:0]  <= #1 din[175:112];
-                dout[4][1][23:0]  <= #1 din[199:176];
+            3'b010 : begin
+                if (pushin) begin
+                    dout[1][1][63:16] <= #1 din[47:0];
+                    dout[2][1][63:0]  <= #1 din[111:48];
+                    dout[3][1][63:0]  <= #1 din[175:112];
+                    dout[4][1][23:0]  <= #1 din[199:176];
+                end
             end
-        end
-        3'b011 : begin
-            if (pushin) begin
-                dout[4][1][63:24] <= #1 din[39:0];
-                dout[0][2][63:0]  <= #1 din[103:40];
-                dout[1][2][63:0]  <= #1 din[167:104];
-                dout[2][2][31:0]  <= #1 din[199:168];
+            3'b011 : begin
+                if (pushin) begin
+                    dout[4][1][63:24] <= #1 din[39:0];
+                    dout[0][2][63:0]  <= #1 din[103:40];
+                    dout[1][2][63:0]  <= #1 din[167:104];
+                    dout[2][2][31:0]  <= #1 din[199:168];
+                end
             end
-        end
-        3'b100 : begin
-            if (pushin) begin
-                dout[2][2][63:32] <= #1 din[31:0];
-                dout[3][2][63:0]  <= #1 din[95:32];
-                dout[4][2][63:0]  <= #1 din[159:96];
-                dout[0][3][39:0]  <= #1 din[199:160];
+            3'b100 : begin
+                if (pushin) begin
+                    dout[2][2][63:32] <= #1 din[31:0];
+                    dout[3][2][63:0]  <= #1 din[95:32];
+                    dout[4][2][63:0]  <= #1 din[159:96];
+                    dout[0][3][39:0]  <= #1 din[199:160];
+                end
             end
-        end
-        3'b101 : begin
-            if (pushin) begin
-                dout[0][3][63:40] <= #1 din[23:0];
-                dout[1][3][63:0]  <= #1 din[87:24];
-                dout[2][3][63:0]  <= #1 din[151:88];
-                dout[3][3][47:0]  <= #1 din[199:152];
+            3'b101 : begin
+                if (pushin) begin
+                    dout[0][3][63:40] <= #1 din[23:0];
+                    dout[1][3][63:0]  <= #1 din[87:24];
+                    dout[2][3][63:0]  <= #1 din[151:88];
+                    dout[3][3][47:0]  <= #1 din[199:152];
+                end
             end
-        end
-        3'b110 : begin
-            if (pushin) begin
-                dout[3][3][63:48] <= #1 din[15:0];
-                dout[4][3][63:0]  <= #1 din[79:16];
-                dout[0][4][63:0]  <= #1 din[143:80];
-                dout[1][4][55:0]  <= #1 din[199:144];
+            3'b110 : begin
+                if (pushin) begin
+                    dout[3][3][63:48] <= #1 din[15:0];
+                    dout[4][3][63:0]  <= #1 din[79:16];
+                    dout[0][4][63:0]  <= #1 din[143:80];
+                    dout[1][4][55:0]  <= #1 din[199:144];
+                end
             end
-        end
-        3'b111 : begin
-            if (pushin) begin
-                dout[1][4][63:56] <= #1 din[7:0];
-                dout[2][4][63:0]  <= #1 din[71:8];
-                dout[3][4][63:0]  <= #1 din[135:72];
-                dout[4][4][63:0]  <= #1 din[199:136];
+            3'b111 : begin
+                if (pushin) begin
+                    dout[1][4][63:56] <= #1 din[7:0];
+                    dout[2][4][63:0]  <= #1 din[71:8];
+                    dout[3][4][63:0]  <= #1 din[135:72];
+                    dout[4][4][63:0]  <= #1 din[199:136];
+                end
             end
-        end
-    endcase
-  end
+        endcase
+    end
 end
 /*==== END DATA LOADING ====*/
 
@@ -159,23 +178,19 @@ endmodule
 
 /*============ LEVEL 1 PERM_LOGIC ============*/
 
-module permLogic (clk, reset, pushin, din, pushout, dout, datatag);
+module permLogic (clk, reset, pushin, din, pushout, dout);
 
 input                   clk, reset, pushin;
 input [4:0][4:0][63:0]  din;
 output                  pushout;
 output [4:0][4:0][63:0] dout;
-output [31:0]           datatag;
 
 wire                    clk, reset, pushin;
 wire [4:0][4:0][63:0]   din;
 wire                    pushout;
 wire [4:0][4:0][63:0]   dout;
-reg [31:0]              datatag;
 
-wire [4:0][4:0][63:0]   muxrec;  //multiplexer line for recirculation
-wire [4:0][4:0][63:0]   datain0, datain1, datain2, datain3;  //for input layers
-wire [4:0][4:0][63:0]   datare0, datare1, datare2, datare3;  //for recirculate layers
+wire [4:0][4:0][63:0]   datain0, datare0, data1, data2;  //datapath connections
 
 /*======== REGISTER UPDATE ========*/
 reg [1:0]               state, nextstate;
@@ -183,34 +198,24 @@ reg [4:0][4:0][63:0]    recirculate;
 reg [6:0]               ringcounter;
 integer i;
 always @ (posedge clk or posedge reset) begin
-  if(reset == 1) begin
-    state <= `restart ;
-    recirculate <= 1600'b0;
-    datatag <= 32'b0;
-    ringcounter <= 7'b0000_001;
-  end else begin
-    state <= #1 nextstate;
-    recirculate <= #1 muxrec;
-    if (state == `firstpush) begin
-        datatag[31:28] <= #1 din[4][4][63:60];
-        datatag[27:24] <= #1 din[1][4][55:52];
-        datatag[23:20] <= #1 din[3][3][47:44];
-        datatag[19:16] <= #1 din[0][3][39:36];
-        datatag[15:12] <= #1 din[2][2][31:28];
-        datatag[11:8] <=  #1 din[4][1][23:20];
-        datatag[7:4] <=   #1 din[1][1][15:12];
-        datatag[3:0] <=   #1 din[3][0][7:4];
+    if(reset == 1) begin
+        state <= `restart ;
+        recirculate <= 1600'b0;
+        ringcounter <= 7'b0000_001;
     end
-    if (state == `full) begin
-        ringcounter[0] <= #1 ringcounter[6];
-        ringcounter[1] <= #1 ringcounter[0];
-        ringcounter[2] <= #1 ringcounter[1];
-        ringcounter[3] <= #1 ringcounter[2];
-        ringcounter[4] <= #1 ringcounter[3];
-        ringcounter[5] <= #1 ringcounter[4];
-        ringcounter[6] <= #1 ringcounter[5];
+    else begin
+        state <= #1 nextstate;
+        recirculate <= #1 dout;
+        if (state == `full) begin
+            ringcounter[0] <= #1 ringcounter[6];
+            ringcounter[1] <= #1 ringcounter[0];
+            ringcounter[2] <= #1 ringcounter[1];
+            ringcounter[3] <= #1 ringcounter[2];
+            ringcounter[4] <= #1 ringcounter[3];
+            ringcounter[5] <= #1 ringcounter[4];
+            ringcounter[6] <= #1 ringcounter[5];
+        end
     end
-  end
 end
 /*==== END REGISTER UPDATE ====*/
 
@@ -252,72 +257,72 @@ end
 /*==== END STATE MACHINE ====*/
 
 /*======== ROUND SETTER ========*/
-reg [4:0] round1, round2, round3;
-wire [4:0] inround1, inround2, inround3;
+wire [4:0] inround1;  //specifically for layer layer_inone2
 assign inround1 = 5'd0;
-assign inround2 = 5'd1;
-assign inround3 = 5'd2;
+reg [4:0] round1, round2, round3;  //used for all other layers
 always @ (*) begin
-    case (ringcounter)
-        7'b0000001 : begin
-            round1 = 5'd3;
-            round2 = 5'd4;
-            round3 = 5'd5;
-        end
-        7'b0000010 : begin
-            round1 = 5'd6;
-            round2 = 5'd7;
-            round3 = 5'd8;
-        end
-        7'b0000100 : begin
-            round1 = 5'd9;
-            round2 = 5'd10;
-            round3 = 5'd11;
-        end
-        7'b0001000 : begin
-            round1 = 5'd12;
-            round2 = 5'd13;
-            round3 = 5'd14;
-        end
-        7'b0010000 : begin
-            round1 = 5'd15;
-            round2 = 5'd16;
-            round3 = 5'd17;
-        end
-        7'b0100000 : begin
-            round1 = 5'd18;
-            round2 = 5'd19;
-            round3 = 5'd20;
-        end
-        7'b1000000 : begin
-            round1 = 5'd21;
-            round2 = 5'd22;
-            round3 = 5'd23;
-        end
-        default : begin
-            round1 = 5'd0;
-            round2 = 5'd0;
-            round3 = 5'd0;
-        end
-    endcase
+    if (state == `firstpush) begin
+        round1 = 5'd0;
+        round2 = 5'd1;
+        round3 = 5'd2;
+    end
+    else begin
+        case (ringcounter)
+            7'b0000001 : begin
+                round1 = 5'd3;
+                round2 = 5'd4;
+                round3 = 5'd5;
+            end
+            7'b0000010 : begin
+                round1 = 5'd6;
+                round2 = 5'd7;
+                round3 = 5'd8;
+            end
+            7'b0000100 : begin
+                round1 = 5'd9;
+                round2 = 5'd10;
+                round3 = 5'd11;
+            end
+            7'b0001000 : begin
+                round1 = 5'd12;
+                round2 = 5'd13;
+                round3 = 5'd14;
+            end
+            7'b0010000 : begin
+                round1 = 5'd15;
+                round2 = 5'd16;
+                round3 = 5'd17;
+            end
+            7'b0100000 : begin
+                round1 = 5'd18;
+                round2 = 5'd19;
+                round3 = 5'd20;
+            end
+            7'b1000000 : begin
+                round1 = 5'd21;
+                round2 = 5'd22;
+                round3 = 5'd23;
+            end
+            default : begin
+                round1 = 5'd0;
+                round2 = 5'd0;
+                round3 = 5'd0;
+            end
+        endcase
+    end
 end
 /*==== END ROUND SETTER ====*/
 
 /*======== DATAPATH ========*/
-assign pushout = ringcounter[6];
-assign datain0 = din;
-assign datare0 = recirculate;
-//input layers
-permLayer layer_inone2 (datain0, inround1, datain1);
-permLayer layer_intwo2 (datain1, inround2, datain2);
-permLayer layer_inthr2 (datain2, inround3, datain3);
-//recirculate layers
-permLayer layer_reone2 (datare0, round1, datare1);
-permLayer layer_retwo2 (datare1, round2, datare2);
-permLayer layer_rethr2 (datare2, round3, datare3);
-//output and mux recirculation
-assign muxrec = (state == `firstpush) ? (datain3) : (datare3);
-assign dout = datare3;
+assign pushout = ringcounter[6];  //when ringcounter reaches highest value, push to output
+
+permLayer layer_inone2 (din, inround1, datain0);  //one layer of din
+permLayer layer_reone2 (recirculate, round1, datare0);  //one layer of recirculate
+
+assign data1 = (state == `firstpush) ? (datain0) : (datare0);  //mux to select which layer to pass
+
+permLayer layer_two2 (data1, round2, data2);  //layer two
+permLayer layer_thr2 (data2, round3, dout);  //layer three
 /*==== END DATAPATH ====*/
 
 endmodule
@@ -337,13 +342,13 @@ wire [4:0][4:0][63:0]   din;
 wire [4:0]              roundin;
 wire [4:0][4:0][63:0]   dout;
 
-wire [4:0][4:0][63:0]   data0, data1, data2, data3;
+wire [4:0][4:0][63:0]   data0, data1, data2, data3;  //datapath connections
 
-theta   theta0 (din, data0);
-rho     rho0 (data0, data1);
-pi      pi0 (data1, data2);
-chi     chi0 (data2, data3);
-iota    iota0 (data3, roundin, dout);
+theta   theta3 (din, data0);
+rho     rho3 (data0, data1);
+pi      pi3 (data1, data2);
+chi     chi3 (data2, data3);
+iota    iota3 (data3, roundin, dout);
 
 endmodule
 /*============ END PERM_LAYER ============*/
@@ -586,7 +591,7 @@ begin
     begin
       for(z=0 ; z<64 ; z=z+1)
       begin
-        chi_out[x][y][z] = chi_in[x][y][z] ^ (~chi_in[modulo_operation_5_1(x+1,5)][y][z] * chi_in[modulo_operation_5_1((x+2),5)][y][z]);
+        chi_out[x][y][z] = chi_in[x][y][z] ^ (~chi_in[modulo_operation_5_1(x+1,5)][y][z] && chi_in[modulo_operation_5_1((x+2),5)][y][z]);
       end 
     end
   end 
@@ -692,10 +697,9 @@ endmodule
 
 /*============ LEVEL 1 OUTPUT_INTERFACE ============*/
 
-module outputInterface (clk, reset, intag, din, pushin, doutix, dout, pushout);
+module outputInterface (clk, reset, din, pushin, doutix, dout, pushout);
 
 input                   clk, reset;
-input [31:0]            intag;
 input [4:0][4:0][63:0]  din;
 input                   pushin;
 output [2:0]            doutix;
@@ -703,7 +707,6 @@ output [199:0]          dout;
 output                  pushout;
 
 wire                    clk, reset;
-wire [31:0]             intag;
 wire [4:0][4:0][63:0]   din;
 wire                    pushin;
 reg [2:0]               doutix;
@@ -713,31 +716,30 @@ wire                    pushout;
 reg [1:0]       state, nextstate;
 wire [2:0]      nextix;
 reg [1599:0]    outreg;
-reg [31:0]      datatag;
 
 /* ======== REGISTER UPDATE ======== */
 always @ (posedge clk or posedge reset) begin
-   if(reset==1)begin
-    doutix <= 3'd0;
-    state <= `restart ;
-    outreg <= 1600'b0;
-    datatag <= 32'b0;
-   end else begin
-    state <= #1 nextstate;
-
-    if (pushin) begin
-        outreg[319:0]     <= #1 {din[4][0][63:0], din[3][0][63:0], din[2][0][63:0], din[1][0][63:0], din[0][0][63:0]};
-        outreg[639:320]   <= #1 {din[4][1][63:0], din[3][1][63:0], din[2][1][63:0], din[1][1][63:0], din[0][1][63:0]};
-        outreg[959:640]   <= #1 {din[4][2][63:0], din[3][2][63:0], din[2][2][63:0], din[1][2][63:0], din[0][2][63:0]};
-        outreg[1279:960]  <= #1 {din[4][3][63:0], din[3][3][63:0], din[2][3][63:0], din[1][3][63:0], din[0][3][63:0]};
-        outreg[1599:1280] <= #1 {din[4][4][63:0], din[3][4][63:0], din[2][4][63:0], din[1][4][63:0], din[0][4][63:0]};
-        datatag <= #1 intag;
+    if(reset==1)begin
+        doutix <= 3'd0;
+        state <= `restart ;
+        outreg <= 1600'b0;
     end
 
-    if ((state == `yespush) || (state == `pbranch)) begin
-        doutix <= #1 nextix;
-    end
-   end 
+    else begin  //~reset
+        state <= #1 nextstate;
+
+        if (pushin) begin
+            outreg[319:0]     <= #1 {din[4][0][63:0], din[3][0][63:0], din[2][0][63:0], din[1][0][63:0], din[0][0][63:0]};
+            outreg[639:320]   <= #1 {din[4][1][63:0], din[3][1][63:0], din[2][1][63:0], din[1][1][63:0], din[0][1][63:0]};
+            outreg[959:640]   <= #1 {din[4][2][63:0], din[3][2][63:0], din[2][2][63:0], din[1][2][63:0], din[0][2][63:0]};
+            outreg[1279:960]  <= #1 {din[4][3][63:0], din[3][3][63:0], din[2][3][63:0], din[1][3][63:0], din[0][3][63:0]};
+            outreg[1599:1280] <= #1 {din[4][4][63:0], din[3][4][63:0], din[2][4][63:0], din[1][4][63:0], din[0][4][63:0]};
+        end
+
+        if ((state == `yespush) || (state == `pbranch)) begin
+            doutix <= #1 nextix;
+        end
+    end 
 end
 
 assign pushout = state[0];
@@ -796,15 +798,14 @@ always @ (doutix or outreg) begin
 end
 /*==== END DATAPATH ====*/
 
+/* ======== DISPLAY FOR TB ======== */
 always @(*) begin
   #1;
   $display("o %d %h",doutix,dout);
-end 
+end
+/*==== END DISPLAY ====*/
 
 endmodule
 /*============ END OUTPUT_INTERFACE ============*/
 
-
-
-
-
+//EOF perm.sv
