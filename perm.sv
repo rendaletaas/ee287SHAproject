@@ -173,6 +173,7 @@ wire                    pushout;
 wire [4:0][4:0][63:0]   dout;
 reg [31:0]              datatag;
 
+wire [4:0][4:0][63:0]   muxrec;  //multiplexer line for recirculation
 wire [4:0][4:0][63:0]   datain0, datain1, datain2, datain3;  //for input layers
 wire [4:0][4:0][63:0]   datare0, datare1, datare2, datare3;  //for recirculate layers
 
@@ -189,9 +190,7 @@ always @ (posedge clk or posedge reset) begin
     ringcounter <= 7'b0000_001;
   end else begin
     state <= #1 nextstate;
-    if ((state == `firstpush) || (state == `full)) begin
-        recirculate <= #1 dout;
-    end
+    recirculate <= #1 muxrec;
     if (state == `firstpush) begin
         datatag[31:28] <= #1 din[4][4][63:60];
         datatag[27:24] <= #1 din[1][4][55:52];
@@ -316,8 +315,9 @@ permLayer layer_inthr2 (datain2, inround3, datain3);
 permLayer layer_reone2 (datare0, round1, datare1);
 permLayer layer_retwo2 (datare1, round2, datare2);
 permLayer layer_rethr2 (datare2, round3, datare3);
-//mux output
-assign dout = (state == `firstpush) ? (datain3) : (datare3);
+//output and mux recirculation
+assign muxrec = (state == `firstpush) ? (datain3) : (datare3);
+assign dout = datare3;
 /*==== END DATAPATH ====*/
 
 endmodule
@@ -586,7 +586,7 @@ begin
     begin
       for(z=0 ; z<64 ; z=z+1)
       begin
-        chi_out[x][y][z] = chi_in[x][y][z] ^ ~chi_in[modulo_operation_5_1(x+1,5)][y][z] * chi_in[modulo_operation_5_1((x+2),5)][y][z];
+        chi_out[x][y][z] = chi_in[x][y][z] ^ (~chi_in[modulo_operation_5_1(x+1,5)][y][z] * chi_in[modulo_operation_5_1((x+2),5)][y][z]);
       end 
     end
   end 
