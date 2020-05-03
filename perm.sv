@@ -68,9 +68,7 @@ wire [2:0]              dix;
 wire [199:0]            din;
 reg [4:0][4:0][63:0]    dout;
 
-/*======== RESET ========*/
 integer ireset [2:0];
-/*==== END RESET ====*/
 
 /*======== DATA LOADING ========*/
 always @ (posedge clk or posedge reset) begin
@@ -82,7 +80,8 @@ always @ (posedge clk or posedge reset) begin
             end
         end
     end
-  end else begin
+  end
+  else begin  //~reset
     case (dix)
         3'b000 : begin
             if (pushin) begin
@@ -174,7 +173,8 @@ wire                    pushout;
 wire [4:0][4:0][63:0]   dout;
 reg [31:0]              datatag;
 
-wire [4:0][4:0][63:0]   data0, data1, data2;
+wire [4:0][4:0][63:0]   datain0, datain1, datain2, datain3;  //for input layers
+wire [4:0][4:0][63:0]   datare0, datare1, datare2, datare3;  //for recirculate layers
 
 /*======== REGISTER UPDATE ========*/
 reg [1:0]               state, nextstate;
@@ -215,9 +215,6 @@ always @ (posedge clk or posedge reset) begin
 end
 /*==== END REGISTER UPDATE ====*/
 
-/*======== RESET ========*/
-/*==== END RESET ====*/
-
 /*======== STATE MACHINE ========*/
 always @ (*) begin
     case (state)
@@ -257,65 +254,70 @@ end
 
 /*======== ROUND SETTER ========*/
 reg [4:0] round1, round2, round3;
+wire [4:0] inround1, inround2, inround3;
+assign inround1 = 5'd0;
+assign inround2 = 5'd1;
+assign inround3 = 5'd2;
 always @ (*) begin
-    if (state == `firstpush) begin
-        round1 = 5'd0;
-        round2 = 5'd1;
-        round3 = 5'd2;
-    end
-    else begin
-        case (ringcounter)
-            7'b0000001 : begin
-                round1 = 5'd3;
-                round2 = 5'd4;
-                round3 = 5'd5;
-            end
-            7'b0000010 : begin
-                round1 = 5'd6;
-                round2 = 5'd7;
-                round3 = 5'd8;
-            end
-            7'b0000100 : begin
-                round1 = 5'd9;
-                round2 = 5'd10;
-                round3 = 5'd11;
-            end
-            7'b0001000 : begin
-                round1 = 5'd12;
-                round2 = 5'd13;
-                round3 = 5'd14;
-            end
-            7'b0010000 : begin
-                round1 = 5'd15;
-                round2 = 5'd16;
-                round3 = 5'd17;
-            end
-            7'b0100000 : begin
-                round1 = 5'd18;
-                round2 = 5'd19;
-                round3 = 5'd20;
-            end
-            7'b1000000 : begin
-                round1 = 5'd21;
-                round2 = 5'd22;
-                round3 = 5'd23;
-            end
-            default : begin
-                round1 = 5'd0;
-                round2 = 5'd0;
-                round3 = 5'd0;
-            end
-        endcase
-    end
+    case (ringcounter)
+        7'b0000001 : begin
+            round1 = 5'd3;
+            round2 = 5'd4;
+            round3 = 5'd5;
+        end
+        7'b0000010 : begin
+            round1 = 5'd6;
+            round2 = 5'd7;
+            round3 = 5'd8;
+        end
+        7'b0000100 : begin
+            round1 = 5'd9;
+            round2 = 5'd10;
+            round3 = 5'd11;
+        end
+        7'b0001000 : begin
+            round1 = 5'd12;
+            round2 = 5'd13;
+            round3 = 5'd14;
+        end
+        7'b0010000 : begin
+            round1 = 5'd15;
+            round2 = 5'd16;
+            round3 = 5'd17;
+        end
+        7'b0100000 : begin
+            round1 = 5'd18;
+            round2 = 5'd19;
+            round3 = 5'd20;
+        end
+        7'b1000000 : begin
+            round1 = 5'd21;
+            round2 = 5'd22;
+            round3 = 5'd23;
+        end
+        default : begin
+            round1 = 5'd0;
+            round2 = 5'd0;
+            round3 = 5'd0;
+        end
+    endcase
 end
 /*==== END ROUND SETTER ====*/
 
 /*======== DATAPATH ========*/
 assign pushout = ringcounter[6];
-assign data0 = (state == `firstpush) ? (din) : (recirculate);
-permLayer layer_one2 (data0, round1, data1);
-permLayer layer_two2 (data1, round2, data2);
-permLayer layer_thr2 (data2, round3, dout);
+assign datain0 = din;
+assign datare0 = recirculate;
+//input layers
+permLayer layer_inone2 (datain0, inround1, datain1);
+permLayer layer_intwo2 (datain1, inround2, datain2);
+permLayer layer_inthr2 (datain2, inround3, datain3);
+//recirculate layers
+permLayer layer_reone2 (datare0, round1, datare1);
+permLayer layer_retwo2 (datare1, round2, datare2);
+permLayer layer_rethr2 (datare2, round3, datare3);
+//mux output
+assign dout = (state == `firstpush) ? (datain3) : (datare3);
 /*==== END DATAPATH ====*/
 
 endmodule
@@ -584,7 +586,7 @@ begin
     begin
       for(z=0 ; z<64 ; z=z+1)
       begin
-        chi_out[x][y][z] = chi_in[x][y][z] ^ ((chi_in[modulo_operation_5_1(x+1,5)][y][z]) ^ 1) * chi_in[modulo_operation_5_1((x+2),5)][y][z];
+        chi_out[x][y][z] = chi_in[x][y][z] ^ ~chi_in[modulo_operation_5_1(x+1,5)][y][z] * chi_in[modulo_operation_5_1((x+2),5)][y][z];
       end 
     end
   end 
@@ -632,7 +634,7 @@ output [4:0][4:0][63:0] dout;
 
 wire [4:0][4:0][63:0]   din;
 wire [4:0]              roundin;
-wire [4:0][4:0][63:0]   dout;
+reg [4:0][4:0][63:0]   dout;
 
 reg [63:0] rc;
 
@@ -667,23 +669,21 @@ always @ (roundin) begin
 end
 
 //modify lane x=0,y=0 by rc
-genvar x0, y0, z0;
-generate
-    for (x0=0; x0<5; x0=x0+1) begin
-        for (y0=0; y0<5; y0=y0+1) begin
-            if ((x0==0) && (y0==0)) begin
-                for (z0=0; z0<64; z0=z0+1) begin
-                    assign dout[x0][y0][z0] = din[x0][y0][z0] ^ rc[z0];
+integer x, y, z;
+always @ (*) begin
+    for (x=0;x<5;x=x+1) begin
+        for (y=0;y<5;y=y+1) begin
+            for (z=0;z<64;z=z+1) begin
+                if ((x==0) && (y==0)) begin
+                    dout[x][y][z] = din[x][y][z] ^ rc[z];
                 end
-            end
-            else begin
-                for (z0=0; z0<64; z0=z0+1) begin
-                    assign dout[x0][y0][z0] = din[x0][y0][z0];
+                else begin
+                    dout[x][y][z] = din[x][y][z];
                 end
             end
         end
     end
-endgenerate
+end
 
 endmodule
 /*============ END IOTA ============*/
@@ -714,10 +714,6 @@ reg [1:0]       state, nextstate;
 wire [2:0]      nextix;
 reg [1599:0]    outreg;
 reg [31:0]      datatag;
-
-
-/* ======== REGISTER RESET ======== */
-/*==== END REGISTER RESET ====*/
 
 /* ======== REGISTER UPDATE ======== */
 always @ (posedge clk or posedge reset) begin
@@ -807,6 +803,7 @@ end
 
 endmodule
 /*============ END OUTPUT_INTERFACE ============*/
+
 
 
 

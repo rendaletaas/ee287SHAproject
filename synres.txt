@@ -30,106 +30,106 @@ Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
 Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
   Loading link library 'tc240c'
   Loading link library 'gtech'
-Loading sverilog file '/home/014532908/HW_287/test_run/proj/perm.sv'
+Loading sverilog file '/home/014564472/Documents/287/proj/perm.sv'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /home/014532908/HW_287/test_run/proj/perm.sv
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:89: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:90: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:91: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:92: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:97: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:98: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:99: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:100: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:105: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:106: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:107: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:108: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:113: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:114: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:115: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:116: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:121: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:122: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:123: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:124: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:129: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:130: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:131: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:132: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:137: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:138: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:139: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:140: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:145: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:146: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:147: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:148: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:191: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:193: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:196: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:197: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:198: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:199: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:200: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:201: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:202: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:203: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:206: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:207: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:208: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:209: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:210: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:211: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:212: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:730: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:733: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:734: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:735: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:736: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:737: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:738: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:742: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:804: delay controls are ignored for synthesis. (VER-176)
+Compiling source file /home/014564472/Documents/287/proj/perm.sv
+Warning:  /home/014564472/Documents/287/proj/perm.sv:88: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:89: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:90: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:91: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:96: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:97: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:98: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:99: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:104: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:105: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:106: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:107: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:112: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:113: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:114: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:115: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:120: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:121: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:122: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:123: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:128: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:129: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:130: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:131: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:136: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:137: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:138: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:139: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:144: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:145: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:146: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:147: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:191: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:193: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:196: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:197: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:198: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:199: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:200: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:201: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:202: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:203: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:206: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:207: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:208: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:209: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:210: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:211: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:212: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:726: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:729: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:730: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:731: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:732: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:733: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:734: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:738: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:800: delay controls are ignored for synthesis. (VER-176)
 
-Statistics for case statements in always block at line 76 in file
-	'/home/014532908/HW_287/test_run/proj/perm.sv'
+Statistics for case statements in always block at line 74 in file
+	'/home/014564472/Documents/287/proj/perm.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            86            |    auto/auto     |
+|            85            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine inputInterface line 76 in file
-		'/home/014532908/HW_287/test_run/proj/perm.sv'.
+	in routine inputInterface line 74 in file
+		'/home/014564472/Documents/287/proj/perm.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      dout_reg       | Flip-flop | 1600  |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 
-Statistics for case statements in always block at line 222 in file
-	'/home/014532908/HW_287/test_run/proj/perm.sv'
+Statistics for case statements in always block at line 219 in file
+	'/home/014564472/Documents/287/proj/perm.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           223            |    auto/auto     |
+|           220            |    auto/auto     |
 ===============================================
 
-Statistics for case statements in always block at line 260 in file
-	'/home/014532908/HW_287/test_run/proj/perm.sv'
+Statistics for case statements in always block at line 261 in file
+	'/home/014564472/Documents/287/proj/perm.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           267            |    auto/auto     |
+|           262            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
 	in routine permLogic line 184 in file
-		'/home/014532908/HW_287/test_run/proj/perm.sv'.
+		'/home/014564472/Documents/287/proj/perm.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -140,37 +140,37 @@ Inferred memory devices in process
 |   recirculate_reg   | Flip-flop | 1600  |  Y  | N  | Y  | N  | N  | N  | N  |
 |     datatag_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:474: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:476: signed to unsigned conversion occurs. (VER-318)
 
-Statistics for case statements in always block at line 639 in file
-	'/home/014532908/HW_287/test_run/proj/perm.sv'
+Statistics for case statements in always block at line 641 in file
+	'/home/014564472/Documents/287/proj/perm.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           640            |    auto/auto     |
+|           642            |    auto/auto     |
 ===============================================
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:748: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:744: signed to unsigned conversion occurs. (VER-318)
 
-Statistics for case statements in always block at line 752 in file
-	'/home/014532908/HW_287/test_run/proj/perm.sv'
+Statistics for case statements in always block at line 748 in file
+	'/home/014564472/Documents/287/proj/perm.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           753            |    auto/auto     |
+|           749            |    auto/auto     |
 ===============================================
 
-Statistics for case statements in always block at line 789 in file
-	'/home/014532908/HW_287/test_run/proj/perm.sv'
+Statistics for case statements in always block at line 785 in file
+	'/home/014564472/Documents/287/proj/perm.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           790            |    auto/auto     |
+|           786            |    auto/auto     |
 ===============================================
 $display output: o ? ??????????????????????????????????????????????????
 
 Inferred memory devices in process
-	in routine outputInterface line 723 in file
-		'/home/014532908/HW_287/test_run/proj/perm.sv'.
+	in routine outputInterface line 719 in file
+		'/home/014564472/Documents/287/proj/perm.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -179,9 +179,9 @@ Inferred memory devices in process
 |      state_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
 |      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
-Warning:  /home/014532908/HW_287/test_run/proj/perm.sv:803: Netlist for always block is empty. (ELAB-985)
+Warning:  /home/014564472/Documents/287/proj/perm.sv:799: Netlist for always block is empty. (ELAB-985)
 Presto compilation completed successfully.
-Current design is now '/home/014532908/HW_287/test_run/proj/perm.db:perm'
+Current design is now '/home/014564472/Documents/287/proj/perm.db:perm'
 Loaded 10 designs.
 Current design is 'perm'.
 perm inputInterface permLogic permLayer theta rho pi chi iota outputInterface
@@ -636,36 +636,51 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 
 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
 
-Information: There are 4768 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 4786 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
-Information: Uniquified 3 instances of design 'permLayer'. (OPT-1056)
-Information: Uniquified 3 instances of design 'theta'. (OPT-1056)
-Information: Uniquified 3 instances of design 'rho'. (OPT-1056)
-Information: Uniquified 3 instances of design 'pi'. (OPT-1056)
-Information: Uniquified 3 instances of design 'chi'. (OPT-1056)
-Information: Uniquified 3 instances of design 'iota'. (OPT-1056)
+Information: Uniquified 6 instances of design 'permLayer'. (OPT-1056)
+Information: Uniquified 6 instances of design 'theta'. (OPT-1056)
+Information: Uniquified 6 instances of design 'rho'. (OPT-1056)
+Information: Uniquified 6 instances of design 'pi'. (OPT-1056)
+Information: Uniquified 6 instances of design 'chi'. (OPT-1056)
+Information: Uniquified 6 instances of design 'iota'. (OPT-1056)
   Simplifying Design 'perm'
 
 Loaded alib file './alib-52/tc240c.db_NOMIN25.alib'
   Building model 'DW01_NAND2'
 Information: Ungrouping hierarchy input1 before Pass 1 (OPT-776)
 Information: Ungrouping hierarchy ouput1 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_one2 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_thr2 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_two2 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_one2/theta0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_one2/rho0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_one2/pi0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_one2/iota0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_thr2/theta0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_two2/theta0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_thr2/rho0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_two2/rho0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_thr2/pi0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_two2/pi0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_thr2/iota0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy logic1/layer_two2/iota0 before Pass 1 (OPT-776)
-Information: Ungrouping 17 of 22 hierarchies before Pass 1 (OPT-775)
+Information: Ungrouping hierarchy logic1/layer_inone2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_rethr2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_retwo2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_reone2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_inthr2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_intwo2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_inone2/theta0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_inone2/rho0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_inone2/pi0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_inone2/iota0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_rethr2/theta0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_retwo2/theta0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_reone2/theta0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_inthr2/theta0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_intwo2/theta0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_rethr2/rho0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_retwo2/rho0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_reone2/rho0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_inthr2/rho0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_intwo2/rho0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_rethr2/pi0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_retwo2/pi0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_reone2/pi0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_inthr2/pi0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_intwo2/pi0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_rethr2/iota0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_retwo2/iota0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_reone2/iota0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_inthr2/iota0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy logic1/layer_intwo2/iota0 before Pass 1 (OPT-776)
+Information: Ungrouping 32 of 40 hierarchies before Pass 1 (OPT-775)
 Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
@@ -693,8 +708,6 @@ Information: Complementing port 'reset_BAR' in design 'permLogic'.
   Mapping Optimization (Phase 3)
   Mapping Optimization (Phase 4)
   Mapping Optimization (Phase 5)
-  Mapping Optimization (Phase 6)
-  Mapping Optimization (Phase 7)
 
   Beginning Constant Register Removal
   -----------------------------------
@@ -749,126 +762,122 @@ Information: Input delay ('rise') on clock port 'clk' will be added to the clock
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:12:12   87538.5      2.98    8745.7       0.0                              0.0000      0.00  
-    0:12:24   88782.0      2.23    6896.0       0.0                              0.0000      0.00  
-    0:12:24   88782.0      2.23    6896.0       0.0                              0.0000      0.00  
-    0:12:25   88780.5      2.22    6870.2       4.4                              0.0000      0.00  
+    0:11:31  139568.0      1.96    5428.9       0.0                              0.0000      0.00  
+    0:11:45  142162.0      1.48    4615.8       0.0                              0.0000      0.00  
+    0:11:45  142162.0      1.48    4615.8       0.0                              0.0000      0.00  
+    0:11:47  142159.0      1.48    4615.8       0.0                              0.0000      0.00  
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:12:43   88778.0      2.21    6870.6       4.4                              0.0000      0.00  
-    0:12:46   88909.0      2.20    6825.1       4.4                              0.0000      0.00  
-    0:12:48   88972.5      2.20    6807.6       4.4                              0.0000      0.00  
-    0:12:50   89024.5      2.20    6799.0       4.4                              0.0000      0.00  
-    0:12:52   89066.0      2.20    6792.6       4.4                              0.0000      0.00  
-    0:12:54   89066.0      2.20    6789.7       4.4                              0.0000      0.00  
-    0:12:56   89057.5      2.20    6786.4       4.4                              0.0000      0.00  
-    0:12:58   89043.0      2.20    6785.4       4.4                              0.0000      0.00  
-    0:13:00   89039.0      2.20    6784.2       4.4                              0.0000      0.00  
-    0:13:02   89032.0      2.20    6784.1       4.4                              0.0000      0.00  
-    0:13:04   89027.5      2.20    6783.9       4.4                              0.0000      0.00  
-    0:13:07   89021.5      2.20    6783.6       4.4                              0.0000      0.00  
-    0:13:08   89018.5      2.20    6783.7       4.4                              0.0000      0.00  
-    0:13:11   88904.5      2.20    6776.2       4.4                              0.0000      0.00  
-    0:13:11   88904.5      2.20    6776.2       4.4                              0.0000      0.00  
-    0:13:34   91276.0      2.20    6822.9       4.4                              0.0000      0.00  
-    0:13:34   91276.0      2.20    6822.9       4.4                              0.0000      0.00  
-    0:13:36   91760.5      2.17    6791.0       4.4                              0.0000      0.00  
-    0:13:36   91760.5      2.17    6791.0       4.4                              0.0000      0.00  
-    0:13:56   93699.0      2.22    6930.8      36.1                              0.0000      0.00  
-    0:13:56   93699.0      2.22    6930.8      36.1                              0.0000      0.00  
-    0:14:24   96006.0      2.14    6659.7      76.7                              0.0000      0.00  
-    0:14:24   96006.0      2.14    6659.7      76.7                              0.0000      0.00  
-    0:14:51   97734.0      2.18    6822.9      96.2                              0.0000      0.00  
-    0:14:51   97734.0      2.18    6822.9      96.2                              0.0000      0.00  
-    0:15:07   99101.5      2.16    6700.1     124.7                              0.0000      0.00  
-    0:15:07   99101.5      2.16    6700.1     124.7                              0.0000      0.00  
-    0:15:33  100735.5      2.25    7021.2     194.3                              0.0000      0.00  
-    0:15:33  100735.5      2.25    7021.2     194.3                              0.0000      0.00  
-    0:15:55  102401.5      2.19    6831.7     291.1                              0.0000      0.00  
-    0:15:55  102401.5      2.19    6831.7     291.1                              0.0000      0.00  
-    0:16:25  103627.5      2.24    6976.9     562.7                              0.0000      0.00  
-
-
-  Beginning Design Rule Fixing  (max_capacitance)
-  ----------------------------
-
-                                  TOTAL                                                            
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
-  --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:16:25  103627.5      2.24    6976.9     562.7                              0.0000      0.00  
-  Global Optimization (Phase 32)
-  Global Optimization (Phase 33)
-  Global Optimization (Phase 34)
-    0:16:27  103681.0      2.20    6941.7       0.0                              0.0000      0.00  
-    0:16:54  104993.5      2.27    7119.6      29.8                              0.0000      0.00  
-    0:17:00  105050.5      2.16    6779.2      18.4 logic1/recirculate_reg[2][2][30]/D    0.0000      0.00  
-    0:17:00  105056.0      2.16    6774.3      18.4                              0.0000      0.00  
-    0:17:27  106384.5      2.15    6723.1     372.1                              0.0000      0.00  
-    0:17:27  106384.5      2.15    6723.1     372.1                              0.0000      0.00  
-    0:17:30  105848.0      2.15    6723.9      57.2                              0.0000      0.00  
-    0:17:30  105848.0      2.15    6723.9      57.2                              0.0000      0.00  
-    0:17:57  107041.0      2.16    6757.8     344.3                              0.0000      0.00  
-    0:17:57  107041.0      2.16    6757.8     344.3                              0.0000      0.00  
-    0:17:58  107329.0      2.16    6752.8     351.4                              0.0000      0.00  
-    0:17:58  107329.0      2.16    6752.8     351.4                              0.0000      0.00  
-    0:18:23  108825.5      2.16    6769.3     690.6                              0.0000      0.00  
-    0:18:23  108825.5      2.16    6769.3     690.6                              0.0000      0.00  
-    0:18:39  109893.0      2.14    6676.5     976.8                              0.0000      0.00  
-    0:18:39  109893.0      2.14    6676.5     976.8                              0.0000      0.00  
-    0:19:05  111155.0      2.20    6827.3    1418.0                              0.0000      0.00  
-    0:19:05  111155.0      2.20    6827.3    1418.0                              0.0000      0.00  
-    0:19:22  112327.0      2.14    6693.8    1553.1                              0.0000      0.00  
-    0:19:22  112327.0      2.14    6693.8    1553.1                              0.0000      0.00  
-    0:19:47  113627.0      2.17    6823.5    2004.0                              0.0000      0.00  
-    0:19:47  113627.0      2.17    6823.5    2004.0                              0.0000      0.00  
-    0:20:06  114825.5      2.17    6763.0    2308.0                              0.0000      0.00  
-    0:20:06  114825.5      2.17    6763.0    2308.0                              0.0000      0.00  
-    0:20:29  115951.5      2.23    6989.0    2683.0                              0.0000      0.00  
+    0:12:15  142156.0      1.48    4615.6       0.0                              0.0000      0.00  
+    0:12:17  142298.5      1.48    4596.6       0.0                              0.0000      0.00  
+    0:12:19  142337.5      1.48    4587.3       0.0                              0.0000      0.00  
+    0:12:21  142349.5      1.48    4581.7       0.0                              0.0000      0.00  
+    0:12:23  142391.5      1.48    4576.7       0.0                              0.0000      0.00  
+    0:12:26  142405.5      1.48    4574.7       0.0                              0.0000      0.00  
+    0:12:28  142398.5      1.48    4572.4       0.0                              0.0000      0.00  
+    0:12:31  142416.5      1.48    4569.0       0.0                              0.0000      0.00  
+    0:12:34  142396.5      1.48    4567.4       0.0                              0.0000      0.00  
+    0:12:36  142385.0      1.48    4567.1       0.0                              0.0000      0.00  
+    0:12:39  142384.0      1.48    4566.3       0.0                              0.0000      0.00  
+    0:12:42  142384.0      1.48    4565.8       0.0                              0.0000      0.00  
+    0:12:46  142373.5      1.48    4565.5       0.0                              0.0000      0.00  
+    0:12:49  142372.0      1.48    4564.7       0.0                              0.0000      0.00  
+    0:12:52  142363.0      1.48    4564.1       0.0                              0.0000      0.00  
+    0:12:56  142350.5      1.48    4564.1       0.0                              0.0000      0.00  
+    0:12:59  142345.5      1.48    4563.8       0.0                              0.0000      0.00  
+    0:13:03  142339.5      1.48    4563.9       0.0                              0.0000      0.00  
+    0:13:06  142332.0      1.48    4563.5       0.0                              0.0000      0.00  
+    0:13:10  142189.0      1.48    4562.4       0.0                              0.0000      0.00  
+    0:13:10  142189.0      1.48    4562.4       0.0                              0.0000      0.00  
+    0:13:29  144214.5      1.48    4520.4       0.0                              0.0000      0.00  
+    0:13:29  144214.5      1.48    4520.4       0.0                              0.0000      0.00  
+    0:13:32  145822.5      1.44    4496.5       0.0                              0.0000      0.00  
+    0:13:32  145822.5      1.44    4496.5       0.0                              0.0000      0.00  
+    0:13:53  147508.5      1.43    4458.0       0.0                              0.0000      0.00  
+    0:13:53  147508.5      1.43    4458.0       0.0                              0.0000      0.00  
+    0:14:09  149326.0      1.41    4374.6       0.0                              0.0000      0.00  
+    0:14:09  149326.0      1.41    4374.6       0.0                              0.0000      0.00  
+    0:14:24  150488.5      1.41    4382.2       0.0                              0.0000      0.00  
+    0:14:24  150488.5      1.41    4382.2       0.0                              0.0000      0.00  
+    0:14:37  151931.5      1.39    4333.4       0.0                              0.0000      0.00  
+    0:14:37  151931.5      1.39    4333.4       0.0                              0.0000      0.00  
+    0:14:54  153310.5      1.40    4362.2       0.0                              0.0000      0.00  
+    0:14:54  153310.5      1.40    4362.2       0.0                              0.0000      0.00  
+    0:15:04  154351.5      1.39    4322.7       0.0                              0.0000      0.00  
+    0:15:04  154351.5      1.39    4322.7       0.0                              0.0000      0.00  
+    0:15:19  155539.5      1.40    4336.4       0.0                              0.0000      0.00  
+    0:15:21  155525.5      1.38    4325.1       0.0                              0.0000      0.00  
+    0:15:38  156555.0      1.39    4325.8       0.0                              0.0000      0.00  
+    0:15:40  156446.0      1.37    4309.3       0.0 ouput1/outreg_reg[1172]/D    0.0000      0.00  
+    0:15:41  156458.5      1.37    4308.7       0.0                              0.0000      0.00  
+    0:15:59  157562.0      1.39    4318.7       0.0                              0.0000      0.00  
+    0:15:59  157562.0      1.39    4318.7       0.0                              0.0000      0.00  
+    0:16:03  157562.0      1.39    4318.7       0.0                              0.0000      0.00  
+    0:16:03  157562.0      1.39    4318.7       0.0                              0.0000      0.00  
+    0:16:17  158536.0      1.41    4324.1       0.0                              0.0000      0.00  
+    0:16:18  158536.0      1.41    4324.1       0.0                              0.0000      0.00  
+    0:16:20  159513.5      1.40    4333.4       0.0                              0.0000      0.00  
+    0:16:20  159513.5      1.40    4333.4       0.0                              0.0000      0.00  
+    0:16:36  160655.0      1.40    4346.2       0.0                              0.0000      0.00  
+    0:16:36  160655.0      1.40    4346.2       0.0                              0.0000      0.00  
+    0:16:53  162045.0      1.37    4270.8       0.0                              0.0000      0.00  
+    0:16:53  162045.0      1.37    4270.8       0.0                              0.0000      0.00  
+    0:17:09  163000.0      1.37    4280.5       0.0                              0.0000      0.00  
+    0:17:09  163000.0      1.37    4280.5       0.0                              0.0000      0.00  
+    0:17:25  164195.0      1.36    4238.9       0.0                              0.0000      0.00  
+    0:17:25  164195.0      1.36    4238.9       0.0                              0.0000      0.00  
+    0:17:42  164928.5      1.37    4255.1       0.0                              0.0000      0.00  
+    0:17:42  164928.5      1.37    4255.1       0.0                              0.0000      0.00  
+    0:17:53  165873.5      1.37    4245.2       0.0                              0.0000      0.00  
+    0:17:53  165873.5      1.37    4245.2       0.0                              0.0000      0.00  
+    0:18:12  166711.5      1.36    4236.0       0.0                              0.0000      0.00  
 
                                   TOTAL                                                            
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:20:31  115951.5      2.23    6989.0    2683.0                              0.0000      0.00  
-    0:20:42  107399.0      2.23    6907.5       0.0                              0.0000      0.00  
-    0:20:49  107213.5      2.10    6603.9       0.0 logic1/recirculate_reg[2][3][10]/D    0.0000      0.00  
-    0:20:52  107156.0      2.09    6568.2       0.0 ouput1/outreg_reg[630]/D     0.0000      0.00  
-    0:20:55  107095.0      2.08    6538.7       0.0 logic1/recirculate_reg[3][4][43]/D    0.0000      0.00  
-    0:20:59  107008.5      2.08    6530.3       0.0                              0.0000      0.00  
-    0:21:00  106916.0      2.08    6528.7       0.0                              0.0000      0.00  
-    0:21:02  106768.0      2.08    6526.6       0.0                              0.0000      0.00  
-    0:21:02  106584.5      2.08    6524.9       0.0                              0.0000      0.00  
-    0:21:03  106397.0      2.08    6523.3       0.0                              0.0000      0.00  
-    0:21:04  106225.5      2.08    6523.8       0.0                              0.0000      0.00  
-    0:21:05  106016.0      2.08    6521.8       0.0                              0.0000      0.00  
-    0:21:08  105732.0      2.08    6517.0       0.0                              0.0000      0.00  
-    0:21:16  105229.5      2.08    6501.4       0.0                              0.0000      0.00  
-    0:21:18  105105.5      2.08    6501.4       0.0                              0.0000      0.00  
-    0:21:18  105105.5      2.08    6501.4       0.0                              0.0000      0.00  
-    0:21:21  105024.5      2.08    6500.5       0.0                              0.0000      0.00  
-    0:21:22  104783.0      2.08    6504.9       0.0                              0.0000      0.00  
-    0:21:32  104229.5      2.08    6516.0       0.0                              0.0000      0.00  
-    0:21:33  104065.5      2.08    6514.9       0.0                              0.0000      0.00  
-    0:21:34  103763.5      2.08    6509.4       0.0                              0.0000      0.00  
-    0:21:59  105565.0      2.03    6367.0     164.2                              0.0000      0.00  
-    0:22:03  105468.0      2.02    6357.8     133.9                              0.0000      0.00  
-    0:22:05  105406.5      2.02    6352.7     133.9                              0.0000      0.00  
-    0:22:08  105357.0      2.02    6349.4     128.0                              0.0000      0.00  
-    0:22:10  105249.5      2.02    6346.8     106.1                              0.0000      0.00  
-    0:22:12  105140.0      2.02    6344.9      63.1                              0.0000      0.00  
-    0:22:15  105092.5      2.02    6343.8      40.0                              0.0000      0.00  
-    0:22:18  105044.5      2.02    6342.4       0.8                              0.0000      0.00  
-    0:22:21  104974.0      2.02    6341.5       0.8                              0.0000      0.00  
-    0:22:24  104919.0      2.02    6340.7       0.0                              0.0000      0.00  
-    0:22:27  104880.0      2.02    6340.2       0.0                              0.0000      0.00  
-    0:22:30  104834.5      2.02    6339.3       0.0                              0.0000      0.00  
-    0:22:33  104788.5      2.02    6339.0       0.0                              0.0000      0.00  
-    0:22:37  104745.0      2.02    6338.7       0.0                              0.0000      0.00  
-    0:22:41  104708.0      2.02    6338.5       0.0                              0.0000      0.00  
-    0:22:45  105512.0      2.04    6377.6       2.8                              0.0000      0.00  
-    0:22:53  102740.5      2.02    6321.4       2.8                              0.0000      0.00  
+    0:18:15  166711.5      1.36    4236.0       0.0                              0.0000      0.00  
+    0:18:24  163206.5      1.36    4218.3       0.0                              0.0000      0.00  
+    0:18:26  163126.5      1.34    4201.3       0.0 ouput1/outreg_reg[1140]/D    0.0000      0.00  
+    0:18:28  163100.5      1.33    4196.5       0.0 ouput1/outreg_reg[533]/D     0.0000      0.00  
+    0:18:30  163055.5      1.33    4192.6       0.0                              0.0000      0.00  
+    0:18:33  162988.5      1.33    4192.3       0.0                              0.0000      0.00  
+    0:18:35  162919.5      1.33    4192.1       0.0                              0.0000      0.00  
+    0:18:37  162781.0      1.33    4191.3       0.0                              0.0000      0.00  
+    0:18:38  162631.0      1.33    4190.3       0.0                              0.0000      0.00  
+    0:18:38  162631.0      1.33    4190.3       0.0                              0.0000      0.00  
+    0:18:42  162511.5      1.33    4190.4       0.0                              0.0000      0.00  
+    0:18:42  162098.5      1.33    4190.2       0.0                              0.0000      0.00  
+    0:18:47  161594.5      1.33    4190.4       0.0                              0.0000      0.00  
+    0:18:52  161018.0      1.33    4190.9       0.0                              0.0000      0.00  
+    0:18:53  160790.5      1.33    4190.7       0.0                              0.0000      0.00  
+    0:18:54  160445.0      1.33    4189.5       0.0                              0.0000      0.00  
+    0:18:55  160291.0      1.33    4189.0       0.0                              0.0000      0.00  
+    0:19:13  161277.0      1.35    4161.2      53.5                              0.0000      0.00  
+    0:19:15  161208.0      1.32    4157.0      53.5                              0.0000      0.00  
+    0:19:17  161160.5      1.32    4155.5      40.9                              0.0000      0.00  
+    0:19:19  161126.5      1.32    4154.0      27.0                              0.0000      0.00  
+    0:19:22  161099.0      1.32    4153.5      27.0                              0.0000      0.00  
+    0:19:24  161050.5      1.32    4152.5      27.0                              0.0000      0.00  
+    0:19:27  161007.5      1.32    4152.1      27.0                              0.0000      0.00  
+    0:19:30  160967.5      1.32    4151.9      21.9                              0.0000      0.00  
+    0:19:33  160935.5      1.32    4151.4      21.9                              0.0000      0.00  
+    0:19:36  160898.5      1.32    4151.4      13.9                              0.0000      0.00  
+    0:19:39  160862.5      1.32    4151.2       7.6                              0.0000      0.00  
+    0:19:42  160834.5      1.32    4151.1       7.6                              0.0000      0.00  
+    0:19:46  160811.5      1.32    4151.1       3.8                              0.0000      0.00  
+    0:19:50  160774.5      1.32    4151.1       3.8                              0.0000      0.00  
+    0:19:54  160742.0      1.32    4151.0       0.0                              0.0000      0.00  
+    0:19:58  160706.0      1.32    4151.1       0.0                              0.0000      0.00  
+    0:20:02  160666.0      1.32    4151.1       0.0                              0.0000      0.00  
+    0:20:06  160639.5      1.32    4151.1       0.0                              0.0000      0.00  
+    0:20:09  160595.5      1.32    4151.1       0.0                              0.0000      0.00  
+    0:20:13  160559.0      1.32    4151.1       0.0                              0.0000      0.00  
+    0:20:18  160521.5      1.32    4151.1       0.0                              0.0000      0.00  
+    0:20:22  160505.0      1.32    4151.2       0.0                              0.0000      0.00  
+    0:20:23  160627.5      1.33    4151.3       0.0                              0.0000      0.00  
+    0:20:28  158810.5      1.33    4145.1       0.0                              0.0000      0.00  
 Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
 
 
@@ -877,8 +886,9 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-Warning: Design 'perm' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Design 'perm' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
      Net 'clk': 4814 load(s), 1 driver(s)
+     Net 'logic1/net201334': 1670 load(s), 1 driver(s)
 Information: State dependent leakage is now switched from off to on.
 Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
@@ -887,7 +897,7 @@ create_clock clk -name clk -period 4.65
 1
 update_timing
 Information: Updating design information... (UID-85)
-Warning: Design 'perm' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Design 'perm' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
 1
 report_timing -max_paths 5
  
@@ -898,7 +908,7 @@ Report : timing
         -max_paths 5
 Design : perm
 Version: K-2015.06-SP5-1
-Date   : Mon Apr 27 16:19:02 2020
+Date   : Sat May  2 23:11:08 2020
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -906,9 +916,9 @@ Date   : Mon Apr 27 16:19:02 2020
 Operating Conditions: NOMIN25   Library: tc240c
 Wire Load Model Mode: top
 
-  Startpoint: logic1/state_reg[0]
+  Startpoint: input1/dout_reg[0][0][21]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: logic1/recirculate_reg[3][4][51]
+  Endpoint: ouput1/outreg_reg[375]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -917,61 +927,61 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  logic1/state_reg[0]/CP (CFD2QX1)                        0.00 #     0.00 r
-  logic1/state_reg[0]/Q (CFD2QX1)                         0.30       0.30 r
-  logic1/U16904/Z (CND2X4)                                0.13       0.44 f
-  logic1/U15104/Z (CNIVX4)                                0.14       0.58 f
-  logic1/U1285/Z (CIVX4)                                  0.08       0.66 r
-  logic1/U1236/Z (CIVX12)                                 0.08       0.74 f
-  logic1/U2884/Z (CAN2X1)                                 0.10       0.85 f
-  logic1/U8289/Z (CNR2X1)                                 0.12       0.96 r
-  logic1/U10994/Z (CEO3X2)                                0.45       1.41 f
-  logic1/U2889/Z (CENX2)                                  0.18       1.59 f
-  logic1/U11868/Z (CENX2)                                 0.26       1.85 r
-  logic1/U18587/Z (CENX1)                                 0.27       2.11 r
-  logic1/layer_one2/chi0/chi_in[3][4][49] (chi_2)         0.00       2.11 r
-  logic1/layer_one2/chi0/U1980/Z (CIVX1)                  0.10       2.21 f
-  logic1/layer_one2/chi0/U2626/Z (CND2X2)                 0.06       2.27 r
-  logic1/layer_one2/chi0/U3500/Z (CENX2)                  0.14       2.41 r
-  logic1/layer_one2/chi0/chi_out[2][4][49] (chi_2)        0.00       2.41 r
-  logic1/U11698/Z (CENX2)                                 0.16       2.57 r
-  logic1/U11697/Z (CEN3X2)                                0.34       2.91 f
-  logic1/U13442/Z (CENX2)                                 0.21       3.12 r
-  logic1/U19300/Z (CENX1)                                 0.24       3.36 r
-  logic1/layer_two2/chi0/chi_in[4][4][52] (chi_1)         0.00       3.36 r
-  logic1/layer_two2/chi0/U586/Z (CIVX2)                   0.08       3.44 f
-  logic1/layer_two2/chi0/U2230/Z (CND2X2)                 0.06       3.49 r
-  logic1/layer_two2/chi0/U2229/Z (CENX2)                  0.14       3.63 r
-  logic1/layer_two2/chi0/chi_out[3][4][52] (chi_1)        0.00       3.63 r
-  logic1/U11345/Z (CENX1)                                 0.19       3.83 r
-  logic1/U10899/Z (CEO3X2)                                0.34       4.17 f
-  logic1/U1730/Z (CENX2)                                  0.21       4.38 r
-  logic1/U18806/Z (CENX1)                                 0.21       4.59 r
-  logic1/layer_thr2/chi0/chi_in[0][4][51] (chi_0)         0.00       4.59 r
-  logic1/layer_thr2/chi0/U736/Z (CIVX2)                   0.06       4.65 f
-  logic1/layer_thr2/chi0/U552/Z (CNR2X1)                  0.10       4.75 r
-  logic1/layer_thr2/chi0/U4713/Z (CENX1)                  0.16       4.91 r
-  logic1/layer_thr2/chi0/chi_out[3][4][51] (chi_0)        0.00       4.91 r
-  logic1/U18805/Z (CMX2XL)                                0.14       5.05 r
-  logic1/recirculate_reg[3][4][51]/D (CFD2QXL)            0.00       5.05 r
-  data arrival time                                                  5.05
+  input1/dout_reg[0][0][21]/CP (CFD2QX2)                  0.00 #     0.00 r
+  input1/dout_reg[0][0][21]/Q (CFD2QX2)                   0.34       0.34 f
+  logic1/din[0][0][21] (permLogic)                        0.00       0.34 f
+  logic1/U8789/Z (CENX2)                                  0.13       0.47 r
+  logic1/U8445/Z (CEN3X2)                                 0.30       0.77 f
+  logic1/U8444/Z (CIVX4)                                  0.08       0.85 r
+  logic1/U8788/Z (CENX4)                                  0.16       1.01 r
+  logic1/U20133/Z (CENX1)                                 0.22       1.23 r
+  logic1/layer_inone2/chi0/chi_in[3][2][30] (chi_5)       0.00       1.23 r
+  logic1/layer_inone2/chi0/U829/Z (CIVX1)                 0.08       1.31 f
+  logic1/layer_inone2/chi0/U4311/Z (CND2X1)               0.06       1.37 r
+  logic1/layer_inone2/chi0/U4312/Z (CENX1)                0.19       1.56 r
+  logic1/layer_inone2/chi0/chi_out[2][2][30] (chi_5)      0.00       1.56 r
+  logic1/U18452/Z (CENX1)                                 0.20       1.76 r
+  logic1/U13972/Z (CEN3X2)                                0.34       2.10 f
+  logic1/U18453/Z (CENX2)                                 0.20       2.30 r
+  logic1/U29084/Z (CENX1)                                 0.27       2.57 r
+  logic1/layer_intwo2/chi0/chi_in[3][0][51] (chi_4)       0.00       2.57 r
+  logic1/layer_intwo2/chi0/U2837/Z (CIVX2)                0.09       2.66 f
+  logic1/layer_intwo2/chi0/U331/Z (COND1X1)               0.11       2.77 r
+  logic1/layer_intwo2/chi0/U1706/Z (CND2X2)               0.11       2.88 f
+  logic1/layer_intwo2/chi0/chi_out[1][0][51] (chi_4)      0.00       2.88 f
+  logic1/U1505/Z (CENX1)                                  0.17       3.05 f
+  logic1/U12721/Z (CEO3X2)                                0.32       3.37 f
+  logic1/U26309/Z (CENX2)                                 0.20       3.57 r
+  logic1/U27398/Z (CENX1)                                 0.22       3.79 r
+  logic1/layer_inthr2/chi0/chi_in[2][1][55] (chi_3)       0.00       3.79 r
+  logic1/layer_inthr2/chi0/U1868/Z (CIVX2)                0.07       3.86 f
+  logic1/layer_inthr2/chi0/U116/Z (CNR2X1)                0.08       3.94 r
+  logic1/layer_inthr2/chi0/U115/Z (CENXL)                 0.16       4.10 r
+  logic1/layer_inthr2/chi0/chi_out[0][1][55] (chi_3)      0.00       4.10 r
+  logic1/U16814/Z (CND2IX1)                               0.10       4.20 f
+  logic1/U25566/Z (CND2X1)                                0.04       4.24 r
+  logic1/dout[0][1][55] (permLogic)                       0.00       4.24 r
+  U6236/Z (CND2XL)                                        0.06       4.30 f
+  U8527/Z (CND2XL)                                        0.05       4.35 r
+  ouput1/outreg_reg[375]/D (CFD2QXL)                      0.00       4.35 r
+  data arrival time                                                  4.35
 
   clock clk (rise edge)                                   4.65       4.65
   clock network delay (ideal)                             0.00       4.65
   clock uncertainty                                      -0.25       4.40
-  logic1/recirculate_reg[3][4][51]/CP (CFD2QXL)           0.00       4.40 r
+  ouput1/outreg_reg[375]/CP (CFD2QXL)                     0.00       4.40 r
   library setup time                                     -0.21       4.19
   data required time                                                 4.19
   --------------------------------------------------------------------------
   data required time                                                 4.19
-  data arrival time                                                 -5.05
+  data arrival time                                                 -4.35
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -0.86
+  slack (VIOLATED)                                                  -0.16
 
 
-  Startpoint: logic1/state_reg[0]
+  Startpoint: input1/dout_reg[4][4][39]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: logic1/recirculate_reg[1][1][16]
+  Endpoint: ouput1/outreg_reg[1071]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -980,60 +990,185 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  logic1/state_reg[0]/CP (CFD2QX1)                        0.00 #     0.00 r
-  logic1/state_reg[0]/Q (CFD2QX1)                         0.30       0.30 f
-  logic1/U16904/Z (CND2X4)                                0.10       0.40 r
-  logic1/U15104/Z (CNIVX4)                                0.16       0.57 r
-  logic1/U16547/Z (CNIVX4)                                0.21       0.78 r
-  logic1/U3868/Z (CMXI2X1)                                0.24       1.01 r
-  logic1/U3246/Z (CENX1)                                  0.22       1.24 r
-  logic1/U12839/Z (CENX2)                                 0.18       1.41 r
-  logic1/U12838/Z (CENX2)                                 0.19       1.61 r
-  logic1/U3961/Z (CENX2)                                  0.25       1.86 r
-  logic1/U13109/Z (CENX2)                                 0.24       2.09 r
-  logic1/layer_one2/chi0/chi_in[4][0][54] (chi_2)         0.00       2.09 r
-  logic1/layer_one2/chi0/U3193/Z (CND2X2)                 0.11       2.20 f
-  logic1/layer_one2/chi0/U3194/Z (CENX2)                  0.15       2.35 r
-  logic1/layer_one2/chi0/chi_out[2][0][54] (chi_2)        0.00       2.35 r
-  logic1/U13113/Z (CENX2)                                 0.17       2.52 r
-  logic1/U2369/Z (CENX2)                                  0.17       2.69 r
-  logic1/U2368/Z (CENX2)                                  0.22       2.91 r
-  logic1/U13806/Z (CENX2)                                 0.24       3.15 r
-  logic1/U12070/Z (CENX1)                                 0.26       3.41 r
-  logic1/layer_two2/chi0/chi_in[1][0][35] (chi_1)         0.00       3.41 r
-  logic1/layer_two2/chi0/U396/Z (CIVX2)                   0.08       3.49 f
-  logic1/layer_two2/chi0/U2845/Z (CND2X2)                 0.06       3.55 r
-  logic1/layer_two2/chi0/U2844/Z (CENX2)                  0.15       3.70 r
-  logic1/layer_two2/chi0/chi_out[0][0][35] (chi_1)        0.00       3.70 r
-  logic1/U15548/Z (CENX2)                                 0.16       3.86 r
-  logic1/U13029/Z (CEO3X2)                                0.35       4.22 f
-  logic1/U13027/Z (CENX2)                                 0.16       4.38 r
-  logic1/U14352/Z (CENX1)                                 0.21       4.59 r
-  logic1/layer_thr2/chi0/chi_in[3][1][16] (chi_0)         0.00       4.59 r
-  logic1/layer_thr2/chi0/U3241/Z (CIVX2)                  0.07       4.66 f
-  logic1/layer_thr2/chi0/U3240/Z (CNR2X2)                 0.07       4.73 r
-  logic1/layer_thr2/chi0/U4518/Z (CENX1)                  0.16       4.90 r
-  logic1/layer_thr2/chi0/chi_out[1][1][16] (chi_0)        0.00       4.90 r
-  logic1/U1359/Z (CMX2X1)                                 0.15       5.05 r
-  logic1/recirculate_reg[1][1][16]/D (CFD2QXL)            0.00       5.05 r
-  data arrival time                                                  5.05
+  input1/dout_reg[4][4][39]/CP (CFD2QX1)                  0.00 #     0.00 r
+  input1/dout_reg[4][4][39]/Q (CFD2QX1)                   0.33       0.33 r
+  logic1/din[4][4][39] (permLogic)                        0.00       0.33 r
+  logic1/U9392/Z (CENX2)                                  0.15       0.48 r
+  logic1/U4548/Z (CEN3X2)                                 0.34       0.82 f
+  logic1/U1069/Z (CENX2)                                  0.16       0.98 r
+  logic1/U1070/Z (CIVX4)                                  0.10       1.07 f
+  logic1/U5059/Z (CENX2)                                  0.17       1.24 r
+  logic1/layer_inone2/chi0/chi_in[4][2][57] (chi_5)       0.00       1.24 r
+  logic1/layer_inone2/chi0/U1035/Z (CIVX1)                0.08       1.32 f
+  logic1/layer_inone2/chi0/U4637/Z (CND2X1)               0.07       1.39 r
+  logic1/layer_inone2/chi0/U4638/Z (CENX1)                0.17       1.56 r
+  logic1/layer_inone2/chi0/chi_out[3][2][57] (chi_5)      0.00       1.56 r
+  logic1/U8296/Z (CENX1)                                  0.19       1.75 r
+  logic1/U11747/Z (CEN3X2)                                0.35       2.10 f
+  logic1/U6351/Z (CENX2)                                  0.21       2.30 r
+  logic1/U28788/Z (CENX1)                                 0.25       2.55 r
+  logic1/layer_intwo2/chi0/chi_in[2][4][32] (chi_4)       0.00       2.55 r
+  logic1/layer_intwo2/chi0/U1544/Z (CIVX2)                0.09       2.63 f
+  logic1/layer_intwo2/chi0/U233/Z (CND2X2)                0.05       2.69 r
+  logic1/layer_intwo2/chi0/U4040/Z (CENX1)                0.17       2.86 r
+  logic1/layer_intwo2/chi0/chi_out[1][4][32] (chi_4)      0.00       2.86 r
+  logic1/U1543/Z (CEOX1)                                  0.23       3.09 r
+  logic1/U11373/Z (CEO3X2)                                0.28       3.36 f
+  logic1/U6787/Z (CENX2)                                  0.21       3.57 r
+  logic1/U30004/Z (CENX1)                                 0.22       3.79 r
+  logic1/layer_inthr2/chi0/chi_in[3][3][47] (chi_3)       0.00       3.79 r
+  logic1/layer_inthr2/chi0/U1723/Z (CIVX2)                0.07       3.86 f
+  logic1/layer_inthr2/chi0/U168/Z (CNR2X1)                0.08       3.94 r
+  logic1/layer_inthr2/chi0/U167/Z (CENXL)                 0.16       4.10 r
+  logic1/layer_inthr2/chi0/chi_out[1][3][47] (chi_3)      0.00       4.10 r
+  logic1/U2513/Z (CND2IX1)                                0.11       4.21 f
+  logic1/U13759/Z (CND2X2)                                0.05       4.25 r
+  logic1/dout[1][3][47] (permLogic)                       0.00       4.25 r
+  U10354/Z (CND2X1)                                       0.06       4.32 f
+  U10355/Z (CND2X1)                                       0.05       4.36 r
+  ouput1/outreg_reg[1071]/D (CFD2QX2)                     0.00       4.36 r
+  data arrival time                                                  4.36
 
   clock clk (rise edge)                                   4.65       4.65
   clock network delay (ideal)                             0.00       4.65
   clock uncertainty                                      -0.25       4.40
-  logic1/recirculate_reg[1][1][16]/CP (CFD2QXL)           0.00       4.40 r
+  ouput1/outreg_reg[1071]/CP (CFD2QX2)                    0.00       4.40 r
+  library setup time                                     -0.20       4.20
+  data required time                                                 4.20
+  --------------------------------------------------------------------------
+  data required time                                                 4.20
+  data arrival time                                                 -4.36
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.16
+
+
+  Startpoint: input1/dout_reg[4][4][39]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: logic1/recirculate_reg[1][3][47]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input1/dout_reg[4][4][39]/CP (CFD2QX1)                  0.00 #     0.00 r
+  input1/dout_reg[4][4][39]/Q (CFD2QX1)                   0.33       0.33 r
+  logic1/din[4][4][39] (permLogic)                        0.00       0.33 r
+  logic1/U9392/Z (CENX2)                                  0.15       0.48 r
+  logic1/U4548/Z (CEN3X2)                                 0.34       0.82 f
+  logic1/U1069/Z (CENX2)                                  0.16       0.98 r
+  logic1/U1070/Z (CIVX4)                                  0.10       1.07 f
+  logic1/U5059/Z (CENX2)                                  0.17       1.24 r
+  logic1/layer_inone2/chi0/chi_in[4][2][57] (chi_5)       0.00       1.24 r
+  logic1/layer_inone2/chi0/U1035/Z (CIVX1)                0.08       1.32 f
+  logic1/layer_inone2/chi0/U4637/Z (CND2X1)               0.07       1.39 r
+  logic1/layer_inone2/chi0/U4638/Z (CENX1)                0.17       1.56 r
+  logic1/layer_inone2/chi0/chi_out[3][2][57] (chi_5)      0.00       1.56 r
+  logic1/U8296/Z (CENX1)                                  0.19       1.75 r
+  logic1/U11747/Z (CEN3X2)                                0.35       2.10 f
+  logic1/U6351/Z (CENX2)                                  0.21       2.30 r
+  logic1/U28788/Z (CENX1)                                 0.25       2.55 r
+  logic1/layer_intwo2/chi0/chi_in[2][4][32] (chi_4)       0.00       2.55 r
+  logic1/layer_intwo2/chi0/U1544/Z (CIVX2)                0.09       2.63 f
+  logic1/layer_intwo2/chi0/U233/Z (CND2X2)                0.05       2.69 r
+  logic1/layer_intwo2/chi0/U4040/Z (CENX1)                0.17       2.86 r
+  logic1/layer_intwo2/chi0/chi_out[1][4][32] (chi_4)      0.00       2.86 r
+  logic1/U1543/Z (CEOX1)                                  0.23       3.09 r
+  logic1/U11373/Z (CEO3X2)                                0.28       3.36 f
+  logic1/U6787/Z (CENX2)                                  0.21       3.57 r
+  logic1/U30004/Z (CENX1)                                 0.22       3.79 r
+  logic1/layer_inthr2/chi0/chi_in[3][3][47] (chi_3)       0.00       3.79 r
+  logic1/layer_inthr2/chi0/U1723/Z (CIVX2)                0.07       3.86 f
+  logic1/layer_inthr2/chi0/U168/Z (CNR2X1)                0.08       3.94 r
+  logic1/layer_inthr2/chi0/U167/Z (CENXL)                 0.16       4.10 r
+  logic1/layer_inthr2/chi0/chi_out[1][3][47] (chi_3)      0.00       4.10 r
+  logic1/U2513/Z (CND2IX1)                                0.11       4.21 f
+  logic1/U13759/Z (CND2X2)                                0.05       4.25 r
+  logic1/U22769/Z (CND2X1)                                0.06       4.32 f
+  logic1/U6865/Z (CND2X1)                                 0.05       4.36 r
+  logic1/recirculate_reg[1][3][47]/D (CFD2QX2)            0.00       4.36 r
+  data arrival time                                                  4.36
+
+  clock clk (rise edge)                                   4.65       4.65
+  clock network delay (ideal)                             0.00       4.65
+  clock uncertainty                                      -0.25       4.40
+  logic1/recirculate_reg[1][3][47]/CP (CFD2QX2)           0.00       4.40 r
+  library setup time                                     -0.20       4.20
+  data required time                                                 4.20
+  --------------------------------------------------------------------------
+  data required time                                                 4.20
+  data arrival time                                                 -4.36
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.16
+
+
+  Startpoint: input1/dout_reg[0][1][10]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ouput1/outreg_reg[243]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input1/dout_reg[0][1][10]/CP (CFD2QX1)                  0.00 #     0.00 r
+  input1/dout_reg[0][1][10]/Q (CFD2QX1)                   0.30       0.30 r
+  logic1/din[0][1][10] (permLogic)                        0.00       0.30 r
+  logic1/U20044/Z (CENX1)                                 0.18       0.47 r
+  logic1/U9585/Z (CEN3X2)                                 0.36       0.83 f
+  logic1/U9586/Z (CENX1)                                  0.16       0.99 f
+  logic1/U10715/Z (CIVX3)                                 0.14       1.13 r
+  logic1/U8204/Z (CENX2)                                  0.20       1.32 r
+  logic1/layer_inone2/chi0/chi_in[3][1][55] (chi_5)       0.00       1.32 r
+  logic1/layer_inone2/chi0/U4273/Z (CIVX2)                0.08       1.40 f
+  logic1/layer_inone2/chi0/U1503/Z (CND2X2)               0.06       1.46 r
+  logic1/layer_inone2/chi0/U1322/Z (CENX2)                0.13       1.59 r
+  logic1/layer_inone2/chi0/chi_out[2][1][55] (chi_5)      0.00       1.59 r
+  logic1/U14352/Z (CEO3X2)                                0.53       2.11 f
+  logic1/U6352/Z (CENX2)                                  0.19       2.30 r
+  logic1/U14668/Z (CENX1)                                 0.22       2.52 r
+  logic1/layer_intwo2/chi0/chi_in[1][0][36] (chi_4)       0.00       2.52 r
+  logic1/layer_intwo2/chi0/U2990/Z (CIVX2)                0.08       2.60 f
+  logic1/layer_intwo2/chi0/U154/Z (CND2X1)                0.06       2.66 r
+  logic1/layer_intwo2/chi0/U1270/Z (CENX1)                0.21       2.86 r
+  logic1/layer_intwo2/chi0/chi_out[0][0][36] (chi_4)      0.00       2.86 r
+  logic1/U14660/Z (CENX2)                                 0.18       3.05 r
+  logic1/U901/Z (CEN3X2)                                  0.34       3.39 f
+  logic1/U900/Z (CENX2)                                   0.20       3.58 r
+  logic1/U27818/Z (CENX1)                                 0.22       3.81 r
+  logic1/layer_inthr2/chi0/chi_in[4][0][51] (chi_3)       0.00       3.81 r
+  logic1/layer_inthr2/chi0/U2739/Z (CIVX2)                0.09       3.90 f
+  logic1/layer_inthr2/chi0/U2737/Z (CND2X2)               0.05       3.94 r
+  logic1/layer_inthr2/chi0/U4362/Z (CENX1)                0.14       4.08 r
+  logic1/layer_inthr2/chi0/chi_out[3][0][51] (chi_3)      0.00       4.08 r
+  logic1/U25578/Z (CND2IX1)                               0.08       4.17 f
+  logic1/U25579/Z (CND2X1)                                0.06       4.23 r
+  logic1/dout[3][0][51] (permLogic)                       0.00       4.23 r
+  U4578/Z (CND2XL)                                        0.07       4.30 f
+  U6151/Z (CND2XL)                                        0.05       4.34 r
+  ouput1/outreg_reg[243]/D (CFD2QXL)                      0.00       4.34 r
+  data arrival time                                                  4.34
+
+  clock clk (rise edge)                                   4.65       4.65
+  clock network delay (ideal)                             0.00       4.65
+  clock uncertainty                                      -0.25       4.40
+  ouput1/outreg_reg[243]/CP (CFD2QXL)                     0.00       4.40 r
   library setup time                                     -0.21       4.19
   data required time                                                 4.19
   --------------------------------------------------------------------------
   data required time                                                 4.19
-  data arrival time                                                 -5.05
+  data arrival time                                                 -4.34
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -0.86
+  slack (VIOLATED)                                                  -0.16
 
 
-  Startpoint: logic1/state_reg[0]
+  Startpoint: input1/dout_reg[2][1][40]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ouput1/outreg_reg[592]
+  Endpoint: ouput1/outreg_reg[376]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -1042,195 +1177,59 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  logic1/state_reg[0]/CP (CFD2QX1)                        0.00 #     0.00 r
-  logic1/state_reg[0]/Q (CFD2QX1)                         0.30       0.30 f
-  logic1/U16904/Z (CND2X4)                                0.10       0.40 r
-  logic1/U12462/Z (CNIVX4)                                0.20       0.60 r
-  logic1/U16314/Z (CNIVX4)                                0.20       0.80 r
-  logic1/U9691/Z (CIVX12)                                 0.15       0.94 f
-  logic1/U16908/Z (CND2X2)                                0.06       1.00 r
-  logic1/U11946/Z (CND2X2)                                0.07       1.07 f
-  logic1/U11944/Z (CIVX2)                                 0.04       1.11 r
-  logic1/U6175/Z (CENX1)                                  0.16       1.27 r
-  logic1/U7861/Z (CEO3X2)                                 0.31       1.58 f
-  logic1/U11943/Z (CIVX4)                                 0.08       1.66 r
-  logic1/U15789/Z (CENX2)                                 0.19       1.85 r
-  logic1/U3814/Z (CENX1)                                  0.21       2.06 r
-  logic1/layer_one2/chi0/chi_in[2][4][19] (chi_2)         0.00       2.06 r
-  logic1/layer_one2/chi0/U697/Z (CND2X1)                  0.11       2.17 f
-  logic1/layer_one2/chi0/U4244/Z (CENX1)                  0.12       2.28 r
-  logic1/layer_one2/chi0/chi_out[0][4][19] (chi_2)        0.00       2.28 r
-  logic1/U7737/Z (CENX1)                                  0.18       2.46 r
-  logic1/U7642/Z (CENX1)                                  0.19       2.66 r
-  logic1/U11714/Z (CENX2)                                 0.20       2.86 r
-  logic1/U11713/Z (CENX2)                                 0.19       3.06 r
-  logic1/U19855/Z (CENX1)                                 0.21       3.27 r
-  logic1/layer_two2/chi0/chi_in[2][4][59] (chi_1)         0.00       3.27 r
-  logic1/layer_two2/chi0/U2901/Z (CIVX2)                  0.09       3.36 f
-  logic1/layer_two2/chi0/U609/Z (CNR2X2)                  0.09       3.45 r
-  logic1/layer_two2/chi0/U2414/Z (CENX2)                  0.16       3.61 r
-  logic1/layer_two2/chi0/chi_out[0][4][59] (chi_1)        0.00       3.61 r
-  logic1/U15923/Z (CENX1)                                 0.19       3.80 r
-  logic1/U13051/Z (CEN3X2)                                0.41       4.21 f
-  logic1/U12329/Z (CENX4)                                 0.18       4.39 r
-  logic1/U17334/Z (CENX1)                                 0.20       4.58 r
-  logic1/layer_thr2/chi0/chi_in[1][1][16] (chi_0)         0.00       4.58 r
-  logic1/layer_thr2/chi0/U3024/Z (CIVX2)                  0.07       4.66 f
-  logic1/layer_thr2/chi0/U47/Z (CNR2X1)                   0.10       4.76 r
-  logic1/layer_thr2/chi0/U4016/Z (CENX1)                  0.16       4.92 r
-  logic1/layer_thr2/chi0/chi_out[4][1][16] (chi_0)        0.00       4.92 r
-  logic1/dout[4][1][16] (permLogic)                       0.00       4.92 r
-  U5307/Z (CND2XL)                                        0.08       5.00 f
-  U7223/Z (CND2XL)                                        0.05       5.04 r
-  ouput1/outreg_reg[592]/D (CFD2QXL)                      0.00       5.04 r
-  data arrival time                                                  5.04
+  input1/dout_reg[2][1][40]/CP (CFD2QX2)                  0.00 #     0.00 r
+  input1/dout_reg[2][1][40]/Q (CFD2QX2)                   0.34       0.34 f
+  logic1/din[2][1][40] (permLogic)                        0.00       0.34 f
+  logic1/U12343/Z (CENX2)                                 0.13       0.47 r
+  logic1/U12342/Z (CEO3X2)                                0.34       0.81 f
+  logic1/U8988/Z (CENX2)                                  0.25       1.06 r
+  logic1/U8985/Z (CENX1)                                  0.26       1.32 r
+  logic1/layer_inone2/chi0/chi_in[1][0][21] (chi_5)       0.00       1.32 r
+  logic1/layer_inone2/chi0/U3668/Z (CIVX2)                0.07       1.39 f
+  logic1/layer_inone2/chi0/U469/Z (CND2X1)                0.06       1.45 r
+  logic1/layer_inone2/chi0/U3669/Z (CENX1)                0.17       1.62 r
+  logic1/layer_inone2/chi0/chi_out[0][0][21] (chi_5)      0.00       1.62 r
+  logic1/U4870/Z (CEO3X1)                                 0.45       2.07 f
+  logic1/U4869/Z (CIVX2)                                  0.06       2.13 r
+  logic1/U4868/Z (CENX2)                                  0.17       2.31 r
+  logic1/U27848/Z (CENX1)                                 0.24       2.55 r
+  logic1/layer_intwo2/chi0/chi_in[4][0][36] (chi_4)       0.00       2.55 r
+  logic1/layer_intwo2/chi0/U1280/Z (CIVX2)                0.09       2.63 f
+  logic1/layer_intwo2/chi0/U1279/Z (CND2X2)               0.07       2.70 r
+  logic1/layer_intwo2/chi0/U2536/Z (CENX2)                0.16       2.86 r
+  logic1/layer_intwo2/chi0/chi_out[3][0][36] (chi_4)      0.00       2.86 r
+  logic1/U15232/Z (CEOX2)                                 0.17       3.03 r
+  logic1/U15231/Z (CEO3X2)                                0.34       3.36 f
+  logic1/U6772/Z (CENX2)                                  0.21       3.58 r
+  logic1/U8829/Z (CENX1)                                  0.23       3.80 r
+  logic1/layer_inthr2/chi0/chi_in[1][1][56] (chi_3)       0.00       3.80 r
+  logic1/layer_inthr2/chi0/U4032/Z (CND2IX1)              0.15       3.95 r
+  logic1/layer_inthr2/chi0/U2860/Z (CENX1)                0.15       4.10 r
+  logic1/layer_inthr2/chi0/chi_out[0][1][56] (chi_3)      0.00       4.10 r
+  logic1/U16621/Z (CND2IX1)                               0.08       4.18 f
+  logic1/U1958/Z (CND2XL)                                 0.05       4.23 r
+  logic1/dout[0][1][56] (permLogic)                       0.00       4.23 r
+  U6561/Z (CND2XL)                                        0.07       4.30 f
+  U8556/Z (CND2XL)                                        0.05       4.34 r
+  ouput1/outreg_reg[376]/D (CFD2QXL)                      0.00       4.34 r
+  data arrival time                                                  4.34
 
   clock clk (rise edge)                                   4.65       4.65
   clock network delay (ideal)                             0.00       4.65
   clock uncertainty                                      -0.25       4.40
-  ouput1/outreg_reg[592]/CP (CFD2QXL)                     0.00       4.40 r
+  ouput1/outreg_reg[376]/CP (CFD2QXL)                     0.00       4.40 r
   library setup time                                     -0.21       4.19
   data required time                                                 4.19
   --------------------------------------------------------------------------
   data required time                                                 4.19
-  data arrival time                                                 -5.04
+  data arrival time                                                 -4.34
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -0.86
-
-
-  Startpoint: logic1/state_reg[0]
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: logic1/recirculate_reg[4][1][16]
-            (rising edge-triggered flip-flop clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                   0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  logic1/state_reg[0]/CP (CFD2QX1)                        0.00 #     0.00 r
-  logic1/state_reg[0]/Q (CFD2QX1)                         0.30       0.30 f
-  logic1/U16904/Z (CND2X4)                                0.10       0.40 r
-  logic1/U12462/Z (CNIVX4)                                0.20       0.60 r
-  logic1/U16314/Z (CNIVX4)                                0.20       0.80 r
-  logic1/U9691/Z (CIVX12)                                 0.15       0.94 f
-  logic1/U16908/Z (CND2X2)                                0.06       1.00 r
-  logic1/U11946/Z (CND2X2)                                0.07       1.07 f
-  logic1/U11944/Z (CIVX2)                                 0.04       1.11 r
-  logic1/U6175/Z (CENX1)                                  0.16       1.27 r
-  logic1/U7861/Z (CEO3X2)                                 0.31       1.58 f
-  logic1/U11943/Z (CIVX4)                                 0.08       1.66 r
-  logic1/U15789/Z (CENX2)                                 0.19       1.85 r
-  logic1/U3814/Z (CENX1)                                  0.21       2.06 r
-  logic1/layer_one2/chi0/chi_in[2][4][19] (chi_2)         0.00       2.06 r
-  logic1/layer_one2/chi0/U697/Z (CND2X1)                  0.11       2.17 f
-  logic1/layer_one2/chi0/U4244/Z (CENX1)                  0.12       2.28 r
-  logic1/layer_one2/chi0/chi_out[0][4][19] (chi_2)        0.00       2.28 r
-  logic1/U7737/Z (CENX1)                                  0.18       2.46 r
-  logic1/U7642/Z (CENX1)                                  0.19       2.66 r
-  logic1/U11714/Z (CENX2)                                 0.20       2.86 r
-  logic1/U11713/Z (CENX2)                                 0.19       3.06 r
-  logic1/U19855/Z (CENX1)                                 0.21       3.27 r
-  logic1/layer_two2/chi0/chi_in[2][4][59] (chi_1)         0.00       3.27 r
-  logic1/layer_two2/chi0/U2901/Z (CIVX2)                  0.09       3.36 f
-  logic1/layer_two2/chi0/U609/Z (CNR2X2)                  0.09       3.45 r
-  logic1/layer_two2/chi0/U2414/Z (CENX2)                  0.16       3.61 r
-  logic1/layer_two2/chi0/chi_out[0][4][59] (chi_1)        0.00       3.61 r
-  logic1/U15923/Z (CENX1)                                 0.19       3.80 r
-  logic1/U13051/Z (CEN3X2)                                0.41       4.21 f
-  logic1/U12329/Z (CENX4)                                 0.18       4.39 r
-  logic1/U17334/Z (CENX1)                                 0.20       4.58 r
-  logic1/layer_thr2/chi0/chi_in[1][1][16] (chi_0)         0.00       4.58 r
-  logic1/layer_thr2/chi0/U3024/Z (CIVX2)                  0.07       4.66 f
-  logic1/layer_thr2/chi0/U47/Z (CNR2X1)                   0.10       4.76 r
-  logic1/layer_thr2/chi0/U4016/Z (CENX1)                  0.16       4.92 r
-  logic1/layer_thr2/chi0/chi_out[4][1][16] (chi_0)        0.00       4.92 r
-  logic1/U5804/Z (CND2XL)                                 0.08       5.00 f
-  logic1/U7139/Z (CND2XL)                                 0.05       5.04 r
-  logic1/recirculate_reg[4][1][16]/D (CFD2QXL)            0.00       5.04 r
-  data arrival time                                                  5.04
-
-  clock clk (rise edge)                                   4.65       4.65
-  clock network delay (ideal)                             0.00       4.65
-  clock uncertainty                                      -0.25       4.40
-  logic1/recirculate_reg[4][1][16]/CP (CFD2QXL)           0.00       4.40 r
-  library setup time                                     -0.21       4.19
-  data required time                                                 4.19
-  --------------------------------------------------------------------------
-  data required time                                                 4.19
-  data arrival time                                                 -5.04
-  --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -0.86
-
-
-  Startpoint: logic1/state_reg[0]
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: logic1/recirculate_reg[0][0][15]
-            (rising edge-triggered flip-flop clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                   0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  logic1/state_reg[0]/CP (CFD2QX1)                        0.00 #     0.00 r
-  logic1/state_reg[0]/Q (CFD2QX1)                         0.30       0.30 f
-  logic1/U16904/Z (CND2X4)                                0.10       0.40 r
-  logic1/U15104/Z (CNIVX4)                                0.16       0.57 r
-  logic1/U16547/Z (CNIVX4)                                0.21       0.78 r
-  logic1/U3868/Z (CMXI2X1)                                0.24       1.01 r
-  logic1/U3246/Z (CENX1)                                  0.22       1.24 r
-  logic1/U12839/Z (CENX2)                                 0.18       1.41 r
-  logic1/U12838/Z (CENX2)                                 0.19       1.61 r
-  logic1/U3961/Z (CENX2)                                  0.25       1.86 r
-  logic1/U13109/Z (CENX2)                                 0.24       2.09 r
-  logic1/layer_one2/chi0/chi_in[4][0][54] (chi_2)         0.00       2.09 r
-  logic1/layer_one2/chi0/U3193/Z (CND2X2)                 0.11       2.20 f
-  logic1/layer_one2/chi0/U3194/Z (CENX2)                  0.15       2.35 r
-  logic1/layer_one2/chi0/chi_out[2][0][54] (chi_2)        0.00       2.35 r
-  logic1/U13113/Z (CENX2)                                 0.17       2.52 r
-  logic1/U2369/Z (CENX2)                                  0.17       2.69 r
-  logic1/U2368/Z (CENX2)                                  0.22       2.91 r
-  logic1/U13806/Z (CENX2)                                 0.24       3.15 r
-  logic1/U15384/Z (CENX1)                                 0.22       3.36 r
-  logic1/layer_two2/chi0/chi_in[3][1][36] (chi_1)         0.00       3.36 r
-  logic1/layer_two2/chi0/U733/Z (CIVX2)                   0.09       3.46 f
-  logic1/layer_two2/chi0/U1109/Z (COND1X1)                0.12       3.58 r
-  logic1/layer_two2/chi0/U2069/Z (CND2X2)                 0.11       3.69 f
-  logic1/layer_two2/chi0/chi_out[1][1][36] (chi_1)        0.00       3.69 f
-  logic1/U15924/Z (CENX2)                                 0.14       3.83 f
-  logic1/U11195/Z (CEO3X2)                                0.31       4.14 r
-  logic1/U11194/Z (CENX1)                                 0.17       4.31 r
-  logic1/U20001/Z (CENX1)                                 0.20       4.51 r
-  logic1/layer_thr2/chi0/chi_in[2][0][15] (chi_0)         0.00       4.51 r
-  logic1/layer_thr2/chi0/U3296/Z (CND2IX1)                0.11       4.62 f
-  logic1/layer_thr2/chi0/U4288/Z (CENX1)                  0.16       4.78 f
-  logic1/layer_thr2/chi0/chi_out[0][0][15] (chi_0)        0.00       4.78 f
-  logic1/U14876/Z (CENX1)                                 0.15       4.93 f
-  logic1/U6802/Z (CND2XL)                                 0.05       4.98 r
-  logic1/U16947/Z (CND2XL)                                0.06       5.04 f
-  logic1/recirculate_reg[0][0][15]/D (CFD2QXL)            0.00       5.04 f
-  data arrival time                                                  5.04
-
-  clock clk (rise edge)                                   4.65       4.65
-  clock network delay (ideal)                             0.00       4.65
-  clock uncertainty                                      -0.25       4.40
-  logic1/recirculate_reg[0][0][15]/CP (CFD2QXL)           0.00       4.40 r
-  library setup time                                     -0.22       4.18
-  data required time                                                 4.18
-  --------------------------------------------------------------------------
-  data required time                                                 4.18
-  data arrival time                                                 -5.04
-  --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -0.86
+  slack (VIOLATED)                                                  -0.16
 
 
 1
 write -hierarchy -format verilog -output perm_gates.v
-Writing verilog file '/home/014532908/HW_287/test_run/proj/perm_gates.v'.
-Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Writing verilog file '/home/014564472/Documents/287/proj/perm_gates.v'.
 1
 quit
 
